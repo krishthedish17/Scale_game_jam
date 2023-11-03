@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2u5awhfyqs0w"]
+[gd_scene load_steps=9 format=3 uid="uid://b2u5awhfyqs0w"]
 
 [ext_resource type="Texture2D" uid="uid://b0u12p2nqj12n" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Ground1.png" id="1_7bhvw"]
 [ext_resource type="Texture2D" uid="uid://cq5o87qj8p4ej" path="res://PaperConquestSprites/PaperConquestSprites/Paper/Paper4.png" id="1_g36wx"]
 [ext_resource type="Texture2D" uid="uid://ds2frl7lagk4j" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass1.png" id="3_3ecqm"]
 [ext_resource type="Texture2D" uid="uid://dct2q5ayyerq5" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass2.png" id="4_tfyvh"]
 [ext_resource type="Texture2D" uid="uid://kkw3v4avnooo" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/RockPlatform.png" id="5_pdsgy"]
+[ext_resource type="Texture2D" uid="uid://bvjrx3h8j7wpp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Table2.png" id="6_nljuk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ony3p"]
 texture = ExtResource("1_g36wx")
@@ -80,3 +81,8 @@ texture = ExtResource("4_tfyvh")
 position = Vector2(544, 493)
 scale = Vector2(0.30705, 0.369186)
 texture = ExtResource("5_pdsgy")
+
+[node name="Sign_1" type="Sprite2D" parent="."]
+position = Vector2(140, 516)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_nljuk")
