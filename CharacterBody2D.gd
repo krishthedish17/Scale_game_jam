@@ -60,12 +60,12 @@ func jump():
 
 # Handle Player Animations
 func player_animations():
-	particle_trails.emitting = false
+	particle_trails = false
 	
 	if is_on_floor():
 		if abs(velocity.x) > 0:
-			particle_trails.emitting = true
-			player_sprite.play("Walk", 1.5)
+			particle_trails = true
+			player_sprite.play("Sprint", 1.5)
 		else:
 			player_sprite.play("Idle")
 	else:
