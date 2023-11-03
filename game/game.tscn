@@ -278,7 +278,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nljuk")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(770, 454)
+position = Vector2(56, 295)
 script = ExtResource("7_jja02")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
