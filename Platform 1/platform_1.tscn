@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://miilhekb52xk"]
+
+[ext_resource type="Texture2D" uid="uid://b0u12p2nqj12n" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Ground1.png" id="1_7xmjf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrmq4"]
+size = Vector2(421, 129)
+
+[node name="Platform 1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.641, 0.641)
+texture = ExtResource("1_7xmjf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2.5, -1.5)
+shape = SubResource("RectangleShape2D_lrmq4")
