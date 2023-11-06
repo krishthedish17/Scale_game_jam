@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var move_speed : float = 400
 @export var jump_force : float = 600
 @export var max_jump_count : int = 2
-var jump_count : int = 2
+var jump_count : int = 0
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
@@ -21,15 +21,26 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	add_to_group("Player")
+
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	if is_on_floor() and jump_count != 0:
+		jump_count = 0
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if jump_count < max_jump_count:
+		if Input.is_action_just_pressed("ui_accept"):
+			velocity.y = JUMP_VELOCITY
+			jump_count += 1
+			print(jump_count)
+	
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -90,11 +101,6 @@ func respawn_tween():
 	var tween = create_tween()
 	tween.stop(); tween.play()
 	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
-
-func jump_tween():
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
-	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
 
 # --------- SIGNALS ---------- #
 
