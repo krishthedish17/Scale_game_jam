@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dct2q5ayyerq5" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass2.png" id="4_tfyvh"]
 [ext_resource type="Texture2D" uid="uid://kkw3v4avnooo" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/RockPlatform.png" id="5_pdsgy"]
 [ext_resource type="Texture2D" uid="uid://bvjrx3h8j7wpp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Table2.png" id="6_nljuk"]
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="7_jja02"]
+[ext_resource type="Script" path="res://game/stickman.gd" id="7_xhhg8"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="8_ch6wp"]
 [ext_resource type="Texture2D" uid="uid://jhkyxcbcswyj" path="res://StickmanPack/Run/thickRunSheet.png" id="9_4m0xl"]
 [ext_resource type="Texture2D" uid="uid://djv3srngimicp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Spikes.png" id="10_usoh5"]
@@ -279,7 +279,7 @@ texture = ExtResource("6_nljuk")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(56, 295)
-script = ExtResource("7_jja02")
+script = ExtResource("7_xhhg8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_sgxpr")
