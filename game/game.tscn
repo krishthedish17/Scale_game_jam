@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2u5awhfyqs0w"]
+[gd_scene load_steps=15 format=3 uid="uid://b2u5awhfyqs0w"]
 
 [ext_resource type="Texture2D" uid="uid://cq5o87qj8p4ej" path="res://PaperConquestSprites/PaperConquestSprites/Paper/Paper4.png" id="1_g36wx"]
 [ext_resource type="Texture2D" uid="uid://ds2frl7lagk4j" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass1.png" id="3_3ecqm"]
@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bvjrx3h8j7wpp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Table2.png" id="6_nljuk"]
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="9_8jc5m"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="10_ih6ik"]
+[ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="10_odvp3"]
 [ext_resource type="Texture2D" uid="uid://djv3srngimicp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Spikes.png" id="10_usoh5"]
 [ext_resource type="Script" path="res://game/traps.gd" id="11_mkrxe"]
-[ext_resource type="Script" path="res://game/Void_of_death.gd" id="12_23o8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ony3p"]
 texture = ExtResource("1_g36wx")
@@ -57,9 +57,6 @@ size = Vector2(1032.41, 140.85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55dsj"]
 size = Vector2(106, 90)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0qb5"]
-size = Vector2(4248, 44)
 
 [node name="game" type="Node2D"]
 
@@ -109,16 +106,8 @@ script = ExtResource("11_mkrxe")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Spikes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/CharacterBody2D"]
-visible = false
 position = Vector2(1, -5)
 shape = SubResource("RectangleShape2D_55dsj")
-
-[node name="Void_of_death" type="Area2D" parent="."]
-script = ExtResource("12_23o8q")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Void_of_death"]
-position = Vector2(585, 938)
-shape = SubResource("RectangleShape2D_m0qb5")
 
 [node name="Platform 1" parent="." instance=ExtResource("9_8jc5m")]
 position = Vector2(144, 646)
@@ -127,3 +116,6 @@ position = Vector2(144, 646)
 position = Vector2(949, 640)
 
 [node name="Stickman" parent="." instance=ExtResource("10_ih6ik")]
+
+[node name="void_of_death" parent="." instance=ExtResource("10_odvp3")]
+position = Vector2(-138, 838)

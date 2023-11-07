@@ -89,25 +89,8 @@ func flip_player():
 		player_sprite.flip_h = false
 
 # Tween Animations
-func death_tween():
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2.ZERO, 0.15)
-	await tween.finished
+func death():
+	death_particles.emitting = true
 	global_position = spawn_point.global_position
-	await get_tree().create_timer(0.3).timeout
-	respawn_tween()
-
-func respawn_tween():
-	var tween = create_tween()
-	tween.stop(); tween.play()
-	tween.tween_property(self, "scale", Vector2.ONE, 0.15) 
-
-# --------- SIGNALS ---------- #
-
-# Reset the player's position to the current level spawn point if collided with any trap
-func _on_collision_body_entered(_body):
-	if _body.is_in_group("Traps"):
-		death_particles.emitting = true
-		death_tween()
 
 
