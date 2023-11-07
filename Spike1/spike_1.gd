@@ -9,9 +9,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-func _on_void_entered(body):
-	#if is_in_group("player"):
+
+
+
+func _on_spike_entered(body):
 	print("died")
 	body.death()
 	GameManager.load_game_scene()

@@ -90,7 +90,8 @@ func flip_player():
 
 # Tween Animations
 func death():
-	death_particles.emitting = true
-	global_position = spawn_point.global_position
+	#death_particles.emitting = true
+	print("I'm dead")
+	
 
 

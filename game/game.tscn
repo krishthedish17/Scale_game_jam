@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2u5awhfyqs0w"]
+[gd_scene load_steps=13 format=3 uid="uid://b2u5awhfyqs0w"]
 
 [ext_resource type="Texture2D" uid="uid://cq5o87qj8p4ej" path="res://PaperConquestSprites/PaperConquestSprites/Paper/Paper4.png" id="1_g36wx"]
 [ext_resource type="Texture2D" uid="uid://ds2frl7lagk4j" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass1.png" id="3_3ecqm"]
@@ -6,10 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://kkw3v4avnooo" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/RockPlatform.png" id="5_pdsgy"]
 [ext_resource type="Texture2D" uid="uid://bvjrx3h8j7wpp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Table2.png" id="6_nljuk"]
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="9_8jc5m"]
+[ext_resource type="PackedScene" uid="uid://hf1vli3tpl0x" path="res://Spike1/spike_1.tscn" id="9_trybd"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="10_ih6ik"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="10_odvp3"]
-[ext_resource type="Texture2D" uid="uid://djv3srngimicp" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Spikes.png" id="10_usoh5"]
-[ext_resource type="Script" path="res://game/traps.gd" id="11_mkrxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ony3p"]
 texture = ExtResource("1_g36wx")
@@ -55,9 +54,6 @@ sources/1 = SubResource("TileSetAtlasSource_ony3p")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3427"]
 size = Vector2(1032.41, 140.85)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_55dsj"]
-size = Vector2(106, 90)
-
 [node name="game" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -96,19 +92,6 @@ position = Vector2(155, 516)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_nljuk")
 
-[node name="Spikes" type="Sprite2D" parent="." groups=["Traps"]]
-z_index = 1
-position = Vector2(766, 550)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_usoh5")
-script = ExtResource("11_mkrxe")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Spikes"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/CharacterBody2D"]
-position = Vector2(1, -5)
-shape = SubResource("RectangleShape2D_55dsj")
-
 [node name="Platform 1" parent="." instance=ExtResource("9_8jc5m")]
 position = Vector2(144, 646)
 
@@ -119,3 +102,7 @@ position = Vector2(949, 640)
 
 [node name="void_of_death" parent="." instance=ExtResource("10_odvp3")]
 position = Vector2(-138, 838)
+
+[node name="Spike1" parent="." instance=ExtResource("9_trybd")]
+position = Vector2(763, 547)
+scale = Vector2(0.5, 0.5)
