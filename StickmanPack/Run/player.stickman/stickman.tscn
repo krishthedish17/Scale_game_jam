@@ -196,8 +196,9 @@ shape = SubResource("CapsuleShape2D_kls8d")
 position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_27oav")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Stickman"]
+[node name="Runparticles1" type="CPUParticles2D" parent="Stickman"]
 
-[node name="CPUParticles2D2" type="CPUParticles2D" parent="Stickman"]
+[node name="Runparticles2" type="CPUParticles2D" parent="Stickman"]
 
 [node name="Camera2D" type="Camera2D" parent="Stickman"]
+zoom = Vector2(1.2, 1.2)
