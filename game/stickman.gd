@@ -109,6 +109,7 @@ func shrink():
 			is_big = false
 			jump_velocity = jump_velocity / 2
 			speed = speed * 2
+			player_sprite.speed_scale = 1
 		else:
 			print("im shrunk")
 			player_sprite.scale = Vector2(0.5, 0.5)
@@ -117,6 +118,7 @@ func shrink():
 			is_small = true
 			jump_velocity = jump_velocity / 2
 			speed = speed * 2
+			player_sprite.speed_scale = 2
 		
 
 func grow():
@@ -124,6 +126,7 @@ func grow():
 		if is_small == true:
 			print("im normal")
 			player_sprite.scale = Vector2(1, 1)
+			player_sprite.speed_scale = 1
 			collision_shape.scale = Vector2(1, 1)
 			collision_hitbox.scale = Vector2(1, 1)
 			jump_velocity = jump_velocity * 2
@@ -131,6 +134,7 @@ func grow():
 			speed = speed / 2
 		else:
 			print("im growing")
+			player_sprite.speed_scale = 0.5
 			player_sprite.scale = Vector2(2, 2)
 			collision_shape.scale = Vector2(2, 2)
 			collision_hitbox.scale = Vector2(2, 2)
