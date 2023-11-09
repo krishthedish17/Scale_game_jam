@@ -102,7 +102,6 @@ func death():
 func shrink():
 	if Input.is_action_just_pressed("shrink"):
 		if is_big == true:
-			print("im normal")
 			player_sprite.scale = Vector2(1, 1)
 			collision_shape.scale = Vector2(1, 1)
 			collision_hitbox.scale = Vector2(1, 1)
@@ -111,7 +110,6 @@ func shrink():
 			speed = speed * 2
 			player_sprite.speed_scale = 1
 		else:
-			print("im shrunk")
 			player_sprite.scale = Vector2(0.5, 0.5)
 			collision_shape.scale = Vector2(0.5, 0.5)
 			collision_hitbox.scale = Vector2(0.5, 0.5)
@@ -124,7 +122,6 @@ func shrink():
 func grow():
 	if Input.is_action_just_pressed("grow"):
 		if is_small == true:
-			print("im normal")
 			player_sprite.scale = Vector2(1, 1)
 			player_sprite.speed_scale = 1
 			collision_shape.scale = Vector2(1, 1)
@@ -133,7 +130,6 @@ func grow():
 			is_small = false
 			speed = speed / 2
 		else:
-			print("im growing")
 			player_sprite.speed_scale = 0.5
 			player_sprite.scale = Vector2(2, 2)
 			collision_shape.scale = Vector2(2, 2)

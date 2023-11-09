@@ -198,8 +198,12 @@ position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_27oav")
 
 [node name="Runparticles1" type="CPUParticles2D" parent="Stickman"]
+emitting = false
+one_shot = true
 
-[node name="Runparticles2" type="CPUParticles2D" parent="Stickman"]
+[node name="Death" type="CPUParticles2D" parent="Stickman"]
+emitting = false
+one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="Stickman"]
 zoom = Vector2(1.2, 1.2)
