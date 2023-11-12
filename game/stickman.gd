@@ -10,8 +10,6 @@ var jump_count : int = 0
 @export var double_jump : = false
 
 var is_grounded : bool = false
-var is_big : bool = false
-var is_small: bool = false
 var jump_velocity: float = -400
 var speed: float = 300
 
@@ -101,11 +99,11 @@ func death():
 
 func shrink():
 	if Input.is_action_just_pressed("shrink"):
-		if is_big == true:
+		if GameManager.is_big == true:
 			player_sprite.scale = Vector2(1, 1)
 			collision_shape.scale = Vector2(1, 1)
 			collision_hitbox.scale = Vector2(1, 1)
-			is_big = false
+			GameManager.is_big = false
 			jump_velocity = jump_velocity / 2
 			speed = speed * 2
 			player_sprite.speed_scale = 1
@@ -113,7 +111,7 @@ func shrink():
 			player_sprite.scale = Vector2(0.5, 0.5)
 			collision_shape.scale = Vector2(0.5, 0.5)
 			collision_hitbox.scale = Vector2(0.5, 0.5)
-			is_small = true
+			GameManager.is_small = true
 			jump_velocity = jump_velocity / 2
 			speed = speed * 2
 			player_sprite.speed_scale = 2
@@ -121,13 +119,13 @@ func shrink():
 
 func grow():
 	if Input.is_action_just_pressed("grow"):
-		if is_small == true:
+		if GameManager.is_small == true:
 			player_sprite.scale = Vector2(1, 1)
 			player_sprite.speed_scale = 1
 			collision_shape.scale = Vector2(1, 1)
 			collision_hitbox.scale = Vector2(1, 1)
 			jump_velocity = jump_velocity * 2
-			is_small = false
+			GameManager.is_small = false
 			speed = speed / 2
 		else:
 			player_sprite.speed_scale = 0.5
@@ -136,7 +134,7 @@ func grow():
 			collision_hitbox.scale = Vector2(2, 2)
 			jump_velocity = jump_velocity * 2
 			speed = speed / 2
-			is_big = true
+			GameManager.is_big = true
 		
 	
 
