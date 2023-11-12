@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2u5awhfyqs0w"]
+[gd_scene load_steps=16 format=3 uid="uid://b2u5awhfyqs0w"]
 
 [ext_resource type="Texture2D" uid="uid://cq5o87qj8p4ej" path="res://PaperConquestSprites/PaperConquestSprites/Paper/Paper4.png" id="1_g36wx"]
 [ext_resource type="Texture2D" uid="uid://ds2frl7lagk4j" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/Grass1.png" id="3_3ecqm"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwx4y708lswt4" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/StoneWall.png" id="10_i2seg"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="10_ih6ik"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="10_odvp3"]
+[ext_resource type="LabelSettings" uid="uid://05a4p6chpbmg" path="res://Fonts/Architext_24.tres" id="11_rq1c2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3427"]
 size = Vector2(1032.41, 140.85)
@@ -355,7 +356,6 @@ texture = ExtResource("10_i2seg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StoneWall2/CharacterBody2D"]
 position = Vector2(2.5, 42)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dxn0u")
 
 [node name="StoneWall3" type="Sprite2D" parent="Environment"]
@@ -368,7 +368,6 @@ texture = ExtResource("10_i2seg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StoneWall3/CharacterBody2D"]
 position = Vector2(2.5, 42)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dxn0u")
 
 [node name="StoneWall4" type="Sprite2D" parent="Environment"]
@@ -381,7 +380,6 @@ texture = ExtResource("10_i2seg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StoneWall4/CharacterBody2D"]
 position = Vector2(2.5, 42)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dxn0u")
 
 [node name="StoneWall5" type="Sprite2D" parent="Environment"]
@@ -394,8 +392,12 @@ texture = ExtResource("10_i2seg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/StoneWall5/CharacterBody2D"]
 position = Vector2(2.5, 42)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dxn0u")
+
+[node name="StoneWall6" type="Sprite2D" parent="Environment"]
+position = Vector2(-2641.25, 535)
+scale = Vector2(0.93871, 0.737864)
+texture = ExtResource("10_i2seg")
 
 [node name="Traps" type="Node" parent="."]
 
@@ -422,7 +424,53 @@ scale = Vector2(0.5, 0.5)
 [node name="void_of_death" parent="Traps" instance=ExtResource("10_odvp3")]
 position = Vector2(-138, 838)
 
-[node name="StoneWall" type="Sprite2D" parent="."]
-position = Vector2(-2641.25, 535)
-scale = Vector2(0.93871, 0.737864)
-texture = ExtResource("10_i2seg")
+[node name="Text" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Text"]
+offset_left = -2072.0
+offset_top = 437.0
+offset_right = -2006.0
+offset_bottom = 463.0
+text = "WASD to move
+Space to jump"
+label_settings = ExtResource("11_rq1c2")
+
+[node name="Label2" type="Label" parent="Text"]
+offset_left = -1175.0
+offset_top = 466.0
+offset_right = -1064.0
+offset_bottom = 530.0
+text = "Press space
+twice to double
+jump"
+label_settings = ExtResource("11_rq1c2")
+
+[node name="Label3" type="Label" parent="Text"]
+offset_left = 490.0
+offset_top = 364.0
+offset_right = 601.0
+offset_bottom = 460.0
+text = "Press Q to
+shrink
+(Scale down)"
+label_settings = ExtResource("11_rq1c2")
+
+[node name="Label4" type="Label" parent="Text"]
+offset_left = 1052.0
+offset_top = 428.0
+offset_right = 1163.0
+offset_bottom = 524.0
+text = "You can
+use abilities 
+mid-jump"
+label_settings = ExtResource("11_rq1c2")
+
+[node name="Label5" type="Label" parent="Text"]
+offset_left = 2267.0
+offset_top = 263.0
+offset_right = 2378.0
+offset_bottom = 359.0
+text = "Press E
+to grow
+(Scale up)"
+label_settings = ExtResource("11_rq1c2")

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c24gt6mqsme18"]
+
+[ext_resource type="FontFile" uid="uid://yv45olrk3gfn" path="res://Fonts/architext/Architex.ttf" id="1_46vod"]
+
+[resource]
+font = ExtResource("1_46vod")
+font_size = 200
+font_color = Color(0, 0, 0, 1)
