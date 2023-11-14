@@ -15,4 +15,4 @@ func _process(delta):
 func _on_spike_entered(body):
 	print("died")
 	body.death()
-	GameManager.load_game_scene()
+	

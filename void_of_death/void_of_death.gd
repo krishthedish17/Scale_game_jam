@@ -13,4 +13,4 @@ func _process(delta):
 func _on_void_entered(body):
 	#if is_in_group("player"):
 	body.death()
-	GameManager.load_game_scene()
+	

@@ -96,6 +96,10 @@ func flip_player():
 func death():
 	#death_particles.emitting = true
 	print("I'm dead")
+	if GameManager.level == 1:
+		GameManager.load_game_scene()
+	elif GameManager.level == 2:
+		GameManager.load_level_2_scene()
 
 func shrink():
 	if Input.is_action_just_pressed("shrink"):

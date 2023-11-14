@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck2us3bypbyqd"]
+
+[ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="1_hm17a"]
+[ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="2_481lv"]
+[ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="3_andjo"]
+
+[node name="Level 2" type="Node2D"]
+
+[node name="Platform 1" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(121, 337)
+
+[node name="Player" parent="Platform 1" instance=ExtResource("2_481lv")]
+position = Vector2(9, -287)
+
+[node name="void_of_death" parent="." instance=ExtResource("3_andjo")]
+position = Vector2(5, 499)
