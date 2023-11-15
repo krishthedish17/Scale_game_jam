@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy51reng8rexs"]
+
+[ext_resource type="Script" path="res://Start_totem.gd" id="1_k51ek"]
+[ext_resource type="Texture2D" uid="uid://cqd02t5suy6pm" path="res://PaperConquestSprites/PaperConquestSprites/Enviroinment/SavePoint3.png" id="2_swex6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5051y"]
+size = Vector2(1009, 270)
+
+[node name="Start_totem" type="Node2D"]
+script = ExtResource("1_k51ek")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_swex6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/CharacterBody2D"]
+polygon = PackedVector2Array(35, -49.6, 35, -43.6, 21, -30.6, 21, 17.5, 72.2, 17.5, 110.2, -21.5, 112.5, -21.5, 117, -23.7, 117, -20.5, 119, -19, 119, 50.7, 118.4, 51.5, -118, 51.5, -118, 50.5, -119, 15.5, -119, -19.5, -117.8, -19.5, -114.8, -22.5, -111.2, -22.5, -71.2, 17.5, -22, 17.5, -22, -30.6, -37, -44.6, -37, -50.7, -35.4, -51.5, 32.1, -51.5)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/CharacterBody2D/CollisionPolygon2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D/CollisionPolygon2D/Area2D"]
+position = Vector2(-35.5, -82)
+shape = SubResource("RectangleShape2D_5051y")
+
+[connection signal="body_entered" from="Sprite2D/CharacterBody2D/CollisionPolygon2D/Area2D" to="." method="_on_body_entered"]
