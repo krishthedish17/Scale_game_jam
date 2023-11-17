@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck2us3bypbyqd"]
+[gd_scene load_steps=6 format=3 uid="uid://ck2us3bypbyqd"]
 
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="1_hm17a"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="2_481lv"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="3_andjo"]
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="4_ek0s1"]
+[ext_resource type="Texture2D" uid="uid://cm4ein7gk5peh" path="res://level 2/paralaxx background/parallax-mountain-bg.png" id="5_bwxqu"]
 
 [node name="Level 2" type="Node2D"]
 
@@ -19,3 +20,10 @@ position = Vector2(5, 499)
 [node name="Start_totem" parent="." instance=ExtResource("4_ek0s1")]
 position = Vector2(126, 245)
 scale = Vector2(0.5, 0.5)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("5_bwxqu")
