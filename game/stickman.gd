@@ -116,6 +116,17 @@ func death():
 		GameManager.load_game_scene()
 	elif GameManager.level == 2:
 		GameManager.load_level_2_scene()
+	elif GameManager.level == 3:
+		GameManager.load_level_3_scene()
+	elif GameManager.level == 4:
+		GameManager.load_level_4_scene()
+	elif GameManager.level == 5:
+		GameManager.load_level_5_scene()
+	elif GameManager.level == 6:
+		GameManager.load_level_6_scene()
+	elif GameManager.level == 7:
+		GameManager.load_level_7_scene()
+	
 
 func shrink():
 	if Input.is_action_just_pressed("shrink"):

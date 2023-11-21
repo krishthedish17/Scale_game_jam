@@ -11,6 +11,5 @@ func _process(delta):
 	pass
 	
 func _on_void_entered(body):
-	#if is_in_group("player"):
-	body.death()
+		body.death()
 	

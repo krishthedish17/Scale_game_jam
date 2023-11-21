@@ -23,6 +23,7 @@ position = Vector2(5, 499)
 [node name="Start_totem" parent="." instance=ExtResource("4_ek0s1")]
 position = Vector2(126, 245)
 scale = Vector2(0.5, 0.5)
+level_mark = 2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
