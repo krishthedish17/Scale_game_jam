@@ -31,3 +31,8 @@ func check_collision():
 	else:
 		distance = 300.0
 	return distance
+func _ready():
+	start_interpolate()
+	
+func start_interpolate():
+	interpolate(0,0)
