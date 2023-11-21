@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://gcpddc1eijcl"]
+[gd_scene load_steps=2 format=3 uid="uid://gcpddc1eijcl"]
+
+[ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="1_kip3p"]
 
 [node name="Level 3 Scene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_kip3p")]
