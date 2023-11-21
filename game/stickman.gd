@@ -46,7 +46,7 @@ func _physics_process(delta):
 			print(jump_count)
 			
 	#handles wall slide.
-	if is_on_wall() && (Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right")):
+	if is_on_wall() && (Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right")) && GameManager.level > 1:
 		jump_count = 0
 		if velocity.y >= 0:
 			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
@@ -96,7 +96,7 @@ func player_animations():
 			player_sprite.play("Idle")
 	else:
 		player_sprite.play("Jump")
-	if is_on_wall():
+	if is_on_wall() && GameManager.level > 1:
 		player_sprite.play("Wall_Cling")
 		
 		

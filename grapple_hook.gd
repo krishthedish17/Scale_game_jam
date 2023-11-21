@@ -12,7 +12,7 @@ func interpolate(length, duration = 0.2):
 	tween_rect_h.tween_property(self, "region_rect", Rect2(0,0,16,length), duration)
  
 func _input(event):
-	if event.is_action_pressed("hook"):
+	if event.is_action_pressed("hook") && GameManager.level > 1:
 		interpolate(await check_collision(), 0.2)
 		await get_tree().create_timer(0.2).timeout
 		reverse_interpolate()
