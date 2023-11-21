@@ -97,7 +97,10 @@ func player_animations():
 	else:
 		player_sprite.play("Jump")
 	if is_on_wall():
-		player_sprite.play("wall cling")
+		if velocity.x < 0:
+			player_sprite.play("wall cling left")
+		elif velocity.x > 0:
+			player_sprite.play("wall cling right")
 
 # Flip player sprite based on X velocity
 func flip_player():
