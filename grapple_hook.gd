@@ -25,6 +25,7 @@ func check_collision():
 	await get_tree().create_timer(0.1).timeout
 	var collision_point
 	if ray_cast.is_colliding():
+		collision_point = ray_cast.get_collision_point()
 		distance = (global_position - collision_point).length()
 		hooked.emit(collision_point)
 	else:
