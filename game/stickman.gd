@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var jump_force : float = 600
 @export var max_jump_count : int = 2
 var jump_count : int = 0
+var wall_slide_acceleration = 10
+var max_wall_slide_Speed = 120
+
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
@@ -19,7 +22,7 @@ var speed: float = 300
 @onready var death_particles = $DeathParticles
 @onready var collision_shape = $CollisionShape2D
 @onready var collision_hitbox = $Collision
-
+@onready var stickman = $"."
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -41,12 +44,21 @@ func _physics_process(delta):
 			velocity.y = jump_velocity
 			jump_count += 1
 			print(jump_count)
+			
+	#handles wall slide.
+	if is_on_wall(): #&& (Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right")):
+		jump_count = 0
+		if velocity.y >= 0:
+			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
+			
+		
+			
 	
 		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * speed
 	else:
@@ -84,6 +96,8 @@ func player_animations():
 			player_sprite.play("Idle")
 	else:
 		player_sprite.play("Jump")
+	if is_on_wall():
+		player_sprite.play("wall cling")
 
 # Flip player sprite based on X velocity
 func flip_player():
@@ -143,3 +157,12 @@ func grow():
 	
 
 
+
+
+func _on_link_hooked(hooked_position):
+	await get_tree().create_timer(0.2).timeout
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "global_position", hooked_position,0.375)
+	jump_count = 0
+
+	

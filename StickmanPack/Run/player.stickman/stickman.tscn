@@ -1,8 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://dvdetwkhreyjx"]
+[gd_scene load_steps=34 format=3 uid="uid://dvdetwkhreyjx"]
 
 [ext_resource type="Script" path="res://game/stickman.gd" id="1_8dh4m"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="2_x0st5"]
 [ext_resource type="Texture2D" uid="uid://jhkyxcbcswyj" path="res://StickmanPack/Run/thickRunSheet.png" id="3_w760s"]
+[ext_resource type="Texture2D" uid="uid://cfxo8iyu7x4cv" path="res://StickmanPack/thickRun-1.png (1).png" id="4_6pnde"]
+[ext_resource type="Texture2D" uid="uid://csj3ndri1o1g5" path="res://StickmanPack/thickRun-1.png (2).png" id="4_c2l0r"]
+[ext_resource type="Script" path="res://grapple gun/pivot.gd" id="4_ojwhu"]
+[ext_resource type="Texture2D" uid="uid://ddxuo8pp2a108" path="res://hook sprites/link.png" id="5_1b365"]
+[ext_resource type="Script" path="res://grapple_hook.gd" id="6_rdni3"]
+[ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/camera.gd" id="7_fuwlg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3u7m"]
 atlas = ExtResource("2_x0st5")
@@ -167,6 +173,22 @@ animations = [{
 "loop": true,
 "name": &"Sprint",
 "speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_c2l0r")
+}],
+"loop": true,
+"name": &"wall cling left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6pnde")
+}],
+"loop": true,
+"name": &"wall cling right",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kls8d"]
@@ -184,12 +206,26 @@ script = ExtResource("1_8dh4m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stickman"]
 sprite_frames = SubResource("SpriteFrames_sl2pp")
-animation = &"Idle"
-frame_progress = 0.0477685
+animation = &"wall cling left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stickman"]
 position = Vector2(-2, 4)
 shape = SubResource("CapsuleShape2D_kls8d")
+
+[node name="pivot" type="Node2D" parent="Stickman"]
+position = Vector2(-2, 3)
+script = ExtResource("4_ojwhu")
+
+[node name="link" type="Sprite2D" parent="Stickman/pivot"]
+texture_repeat = 2
+rotation = -1.5708
+texture = ExtResource("5_1b365")
+region_enabled = true
+region_rect = Rect2(0.549, -0.072, 15.523, 16)
+script = ExtResource("6_rdni3")
+
+[node name="RayCast2D" type="RayCast2D" parent="Stickman/pivot/link"]
+target_position = Vector2(0, 300)
 
 [node name="Collision" type="Area2D" parent="Stickman"]
 
@@ -207,3 +243,6 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="Stickman"]
 zoom = Vector2(1.2, 1.2)
+script = ExtResource("7_fuwlg")
+
+[connection signal="hooked" from="Stickman/pivot/link" to="Stickman" method="_on_link_hooked"]

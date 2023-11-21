@@ -8,11 +8,14 @@
 
 [node name="Level 2" type="Node2D"]
 
+[node name="Player" parent="." instance=ExtResource("2_481lv")]
+position = Vector2(127, 188)
+
 [node name="Platform 1" parent="." instance=ExtResource("1_hm17a")]
 position = Vector2(121, 337)
 
-[node name="Player" parent="Platform 1" instance=ExtResource("2_481lv")]
-position = Vector2(9, -287)
+[node name="Platform 2" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(90, 41)
 
 [node name="void_of_death" parent="." instance=ExtResource("3_andjo")]
 position = Vector2(5, 499)
