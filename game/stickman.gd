@@ -101,12 +101,13 @@ func player_animations():
 			player_sprite.play("wall cling left")
 		elif velocity.x > 0:
 			player_sprite.play("wall cling right")
+		
 
 # Flip player sprite based on X velocity
 func flip_player():
 	if velocity.x < 0: 
 		player_sprite.flip_h = true
-	elif velocity.x > 0:
+	elif velocity.x >= 0:
 		player_sprite.flip_h = false
 
 # Tween Animations
