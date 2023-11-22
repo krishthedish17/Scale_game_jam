@@ -2804,6 +2804,15 @@ text = "Wow, you found a scale!
 pick it up"
 label_settings = ExtResource("15_yeoub")
 
+[node name="Label3" type="Label" parent="Text boxes"]
+offset_left = 3352.0
+offset_top = 1139.0
+offset_right = 3737.0
+offset_bottom = 1266.0
+text = "some would say the closest scale
+is under the sea"
+label_settings = ExtResource("15_yeoub")
+
 [node name="traps" type="Node2D" parent="."]
 
 [node name="level_3_spike" parent="traps" instance=ExtResource("19_3fkry")]
