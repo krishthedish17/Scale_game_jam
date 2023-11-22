@@ -22,6 +22,9 @@ var water_speed = 0.25
 var is_grounded : bool = false
 var jump_velocity: float = -400
 var base_speed: float = 300
+var small_speed: float = base_speed * 2
+var large_speed: float = base_speed / 2
+var current_speed: float = base_speed
 var speed: float = base_speed
 var dashing = false
 
@@ -37,6 +40,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	add_to_group("Player")
+	print(in_water)
 
 
 func _physics_process(delta):
@@ -47,6 +51,7 @@ func _physics_process(delta):
 			speed = base_speed * water_speed
 		else:
 			velocity.y += gravity * delta
+			speed = base_speed
 	if not dash.is_dashing():
 		dashing = false
 		
@@ -69,7 +74,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("dash") && GameManager.level > 2:
 		print("dash")
 		dash.start_dash(dash_length)
-	var speed = dash_speed if dash.is_dashing() else base_speed
+	var speed = dash_speed if dash.is_dashing() else current_speed
 	if dash.is_dashing():
 		dashing = true
 	
@@ -162,14 +167,15 @@ func death():
 	
 
 func shrink():
-	if Input.is_action_just_pressed("shrink"):
+	if Input.is_action_just_pressed("shrink") && not GameManager.is_small: 
 		if GameManager.is_big == true:
 			player_sprite.scale = Vector2(1, 1)
 			collision_shape.scale = Vector2(1, 1)
 			collision_hitbox.scale = Vector2(1, 1)
 			GameManager.is_big = false
 			jump_velocity = -400
-			speed = 400
+			speed = base_speed
+			current_speed = speed
 			player_sprite.speed_scale = 1
 		else:
 			player_sprite.scale = Vector2(0.4, 0.4)
@@ -177,12 +183,13 @@ func shrink():
 			collision_hitbox.scale = Vector2(0.4, 0.4)
 			GameManager.is_small = true
 			jump_velocity = -200
-			speed = 800
+			speed = small_speed
+			current_speed = speed
 			player_sprite.speed_scale = 2
 		
 
 func grow():
-	if Input.is_action_just_pressed("grow"):
+	if Input.is_action_just_pressed("grow") && not GameManager.is_big:
 		if GameManager.is_small == true:
 			player_sprite.scale = Vector2(1, 1)
 			player_sprite.speed_scale = 1
@@ -190,14 +197,16 @@ func grow():
 			collision_hitbox.scale = Vector2(1, 1)
 			jump_velocity = -400
 			GameManager.is_small = false
-			speed = 400
+			speed = base_speed
+			current_speed = speed
 		else:
 			player_sprite.speed_scale = 0.5
 			player_sprite.scale = Vector2(2, 2)
 			collision_shape.scale = Vector2(2, 2)
 			collision_hitbox.scale = Vector2(2, 2)
 			jump_velocity = -800
-			speed = 200
+			speed = large_speed
+			current_speed = speed
 			GameManager.is_big = true
 		
 	
