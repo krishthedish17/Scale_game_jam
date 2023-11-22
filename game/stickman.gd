@@ -10,7 +10,8 @@ var max_wall_slide_Speed = 120
 var dash_speed = 1800
 var dash_length = 0.1
 var in_water = false
-var water_grav = 0.5
+var water_grav = 0.25
+var water_speed = 0.25
 
 @onready var dash = $dash
 
@@ -43,6 +44,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		if in_water == true:
 			velocity.y += gravity * delta * water_grav
+			speed = base_speed * water_speed
 		else:
 			velocity.y += gravity * delta
 	if not dash.is_dashing():
@@ -64,13 +66,12 @@ func _physics_process(delta):
 		if velocity.y >= 0:
 			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
 			
-	if Input.is_action_just_pressed("dash"):
+	if Input.is_action_just_pressed("dash") && GameManager.level > 2:
 		print("dash")
 		dash.start_dash(dash_length)
 	var speed = dash_speed if dash.is_dashing() else base_speed
 	if dash.is_dashing():
 		dashing = true
-		
 	
 			
 	
@@ -99,6 +100,7 @@ func _process(_delta):
 	flip_player()
 	shrink()
 	grow()
+	restart()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
@@ -214,4 +216,8 @@ func water():
 func not_water():
 	print("no swim :(")
 	in_water = false
-	
+
+func restart():
+	if Input.is_action_just_pressed("restart"):
+		death()
+		
