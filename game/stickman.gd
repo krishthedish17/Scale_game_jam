@@ -170,9 +170,9 @@ func shrink():
 			speed = 400
 			player_sprite.speed_scale = 1
 		else:
-			player_sprite.scale = Vector2(0.5, 0.5)
-			collision_shape.scale = Vector2(0.5, 0.5)
-			collision_hitbox.scale = Vector2(0.5, 0.5)
+			player_sprite.scale = Vector2(0.4, 0.4)
+			collision_shape.scale = Vector2(0.4, 0.4)
+			collision_hitbox.scale = Vector2(0.4, 0.4)
 			GameManager.is_small = true
 			jump_velocity = -200
 			speed = 800
