@@ -9,8 +9,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-func _on_void_entered(body):
+
+
+func _on_water_entered(body):
 	if body.is_in_group("player"):
-		body.death()
-	
+		body.water()
+		
+
+
+
+
+func _on_water_exited(body):
+	if body.is_in_group("player"):
+		body.not_water()

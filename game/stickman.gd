@@ -7,6 +7,12 @@ extends CharacterBody2D
 var jump_count : int = 0
 var wall_slide_acceleration = 10
 var max_wall_slide_Speed = 120
+var dash_speed = 1800
+var dash_length = 0.1
+var in_water = false
+var water_grav = 0.5
+
+@onready var dash = $dash
 
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
@@ -14,7 +20,9 @@ var max_wall_slide_Speed = 120
 
 var is_grounded : bool = false
 var jump_velocity: float = -400
-var speed: float = 300
+var base_speed: float = 300
+var speed: float = base_speed
+var dashing = false
 
 @onready var player_sprite = $AnimatedSprite2D
 @onready var spawn_point = %SpawnPoint
@@ -33,7 +41,12 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if in_water == true:
+			velocity.y += gravity * delta * water_grav
+		else:
+			velocity.y += gravity * delta
+	if not dash.is_dashing():
+		dashing = false
 		
 	if is_on_floor() and jump_count != 0:
 		jump_count = 0
@@ -51,7 +64,14 @@ func _physics_process(delta):
 		if velocity.y >= 0:
 			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
 			
+	if Input.is_action_just_pressed("dash"):
+		print("dash")
+		dash.start_dash(dash_length)
+	var speed = dash_speed if dash.is_dashing() else base_speed
+	if dash.is_dashing():
+		dashing = true
 		
+	
 			
 	
 		
@@ -98,6 +118,15 @@ func player_animations():
 		player_sprite.play("Jump")
 	if is_on_wall() && GameManager.level > 1:
 		player_sprite.play("Wall_Cling")
+	if Input.is_action_just_pressed("dash") && GameManager.level > 2:
+			if velocity.x >= 0:
+				self.set_rotation_degrees(90)
+			else:
+				self.set_rotation_degrees(-90)
+			while dashing == true:
+				player_sprite.play("Dash")
+				await get_tree().create_timer(0.1).timeout
+			self.set_rotation_degrees(0)
 		
 		
 
@@ -178,4 +207,11 @@ func _on_link_hooked(hooked_position):
 	tween.tween_property(self, "global_position", hooked_position,0.375)
 	jump_count = 0
 
+func water():
+	print("swim")
+	in_water = true
+
+func not_water():
+	print("no swim :(")
+	in_water = false
 	
