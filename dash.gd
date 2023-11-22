@@ -8,3 +8,4 @@ func start_dash(dur):
 	
 func is_dashing():
 	return !timer.is_stopped()
+	
