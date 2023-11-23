@@ -149,6 +149,7 @@ func flip_player():
 # Tween Animations
 func death():
 	#death_particles.emitting = true
+	print(GameManager.level)
 	print("I'm dead")
 	if GameManager.level == 1:
 		GameManager.load_game_scene()
