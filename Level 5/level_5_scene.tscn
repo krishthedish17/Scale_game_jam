@@ -359,44 +359,48 @@ tile_set = SubResource("TileSet_os6a3")
 format = 2
 layer_0/tile_data = PackedInt32Array(327674, 524288, 11, 327675, 458752, 11, 327676, 458752, 11, 327677, 458752, 11, 327678, 458752, 11, 327679, 458752, 11, 262144, 458752, 11, 262145, 458752, 11, 262146, 458752, 11, 262147, 458752, 11, 262148, 458752, 11, 262149, 458752, 11, 262150, 458752, 11, 262151, 458752, 11, 262152, 458752, 11, 262153, 458752, 11, 262154, 458752, 11, 262155, 458752, 11, 262156, 458752, 11, 262157, 458752, 11, 262158, 458752, 11, 262159, 458752, 11, 262160, 458752, 11, 262161, 458752, 11, 262162, 458752, 11, 262163, 458752, 11, 262164, 589824, 11, 327673, 524288, 11, 327672, 524288, 11, 327671, 524288, 11, 327670, 524288, 11, 327669, 524288, 11, 327668, 524288, 11, 327667, 524288, 11, 327666, 524288, 11, 327665, 524288, 11, 327664, 524288, 11, 327663, 524288, 11, 327662, 524288, 11, 327661, 524288, 11, 327660, 393216, 11)
 
-[node name="Back" type="Sprite2D" parent="."]
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Main bg" type="Node2D" parent="Backgrounds"]
+
+[node name="Back" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -2
 position = Vector2(-340, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("5_qo0e1")
 
-[node name="Back2" type="Sprite2D" parent="."]
+[node name="Back2" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -2
 position = Vector2(-52, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("5_qo0e1")
 
-[node name="Back3" type="Sprite2D" parent="."]
+[node name="Back3" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -2
 position = Vector2(236, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("5_qo0e1")
 
-[node name="Back4" type="Sprite2D" parent="."]
+[node name="Back4" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -2
 position = Vector2(524, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("5_qo0e1")
 
-[node name="Middle" type="Sprite2D" parent="."]
+[node name="Middle" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -1
 position = Vector2(-269, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("6_0ek4b")
 
-[node name="Middle3" type="Sprite2D" parent="."]
+[node name="Middle3" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -1
 position = Vector2(593, -78)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("6_0ek4b")
 
-[node name="Middle2" type="Sprite2D" parent="."]
+[node name="Middle2" type="Sprite2D" parent="Backgrounds/Main bg"]
 z_index = -1
 position = Vector2(162, -77)
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 texture = ExtResource("6_0ek4b")

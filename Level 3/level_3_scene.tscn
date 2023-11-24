@@ -2026,6 +2026,7 @@ size = Vector2(342, 67)
 [node name="Level 3 Scene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_kip3p")]
+position = Vector2(713, 273)
 
 [node name="Start_totem" parent="." instance=ExtResource("2_ss5i5")]
 position = Vector2(2, 213)
