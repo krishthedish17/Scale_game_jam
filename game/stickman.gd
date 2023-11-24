@@ -45,7 +45,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	# Add the gravity.
+	
 	if not is_on_floor():
 		if in_water == true:
 			velocity.y += gravity * delta * water_grav
@@ -244,3 +244,4 @@ func time_stop():
 		get_tree().paused = !get_tree().paused
 		if pause_times % 2 == 0:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		

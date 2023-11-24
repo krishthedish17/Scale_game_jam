@@ -11,7 +11,8 @@ var level: int = 1
 var scales_collected: int = 0
 var level3win: bool = false
 var dash_count: int = 0
-
+func start():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 func load_game_scene() -> void:
 	get_tree().change_scene_to_packed(game_scene)
 	level = 1
