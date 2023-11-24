@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lhd7npq0ucgh" path="res://Level 5 assests/tileset.png" id="1_bqt2g"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kknyf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ccs6h"]
 texture = ExtResource("1_bqt2g")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -333,4 +333,4 @@ texture = ExtResource("1_bqt2g")
 
 [resource]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_kknyf")
+sources/2 = SubResource("TileSetAtlasSource_ccs6h")

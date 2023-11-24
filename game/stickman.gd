@@ -13,6 +13,7 @@ var in_water = false
 var water_grav = 0.25
 var water_speed = 0.25
 var pause_times = 0
+var slowed = false
 
 @onready var dash = $dash
 
