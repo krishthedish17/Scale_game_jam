@@ -30,4 +30,5 @@ level_mark = 2
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(84, 60)
 texture = ExtResource("5_bwxqu")
