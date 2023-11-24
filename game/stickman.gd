@@ -12,6 +12,7 @@ var dash_length = 0.1
 var in_water = false
 var water_grav = 0.25
 var water_speed = 0.25
+var pause_times = 0
 
 @onready var dash = $dash
 
@@ -112,6 +113,7 @@ func _process(_delta):
 	shrink()
 	grow()
 	restart()
+	time_stop()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
@@ -236,4 +238,9 @@ func not_water():
 func restart():
 	if Input.is_action_just_pressed("restart"):
 		death()
-		
+func time_stop():
+	if Input.is_action_just_pressed("time stop"):
+		pause_times += 1
+		get_tree().paused = !get_tree().paused
+		if pause_times % 2 == 0:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
