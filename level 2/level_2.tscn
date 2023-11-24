@@ -352,6 +352,746 @@ gravity = Vector2(0, 100)
 scale_amount_min = 4.0
 scale_amount_max = 4.0
 
+[node name="CPUParticles2D46" type="CPUParticles2D" parent="."]
+position = Vector2(468, -2461)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D47" type="CPUParticles2D" parent="."]
+position = Vector2(413, -2819)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D48" type="CPUParticles2D" parent="."]
+position = Vector2(816, -2940)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D49" type="CPUParticles2D" parent="."]
+position = Vector2(735, -2794)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D50" type="CPUParticles2D" parent="."]
+position = Vector2(1113, -2824)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D53" type="CPUParticles2D" parent="."]
+position = Vector2(855, -3275)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D54" type="CPUParticles2D" parent="."]
+position = Vector2(709, -3223)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D55" type="CPUParticles2D" parent="."]
+position = Vector2(1118, -3077)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D56" type="CPUParticles2D" parent="."]
+position = Vector2(1212, -3270)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D57" type="CPUParticles2D" parent="."]
+position = Vector2(1740, -3230)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D66" type="CPUParticles2D" parent="."]
+position = Vector2(1833, -3533)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D67" type="CPUParticles2D" parent="."]
+position = Vector2(1523, -3586)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D68" type="CPUParticles2D" parent="."]
+position = Vector2(1822, -3857)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D69" type="CPUParticles2D" parent="."]
+position = Vector2(2221, -3775)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D70" type="CPUParticles2D" parent="."]
+position = Vector2(2046, -3867)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D71" type="CPUParticles2D" parent="."]
+position = Vector2(2377, -3917)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D72" type="CPUParticles2D" parent="."]
+position = Vector2(2402, -3525)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D73" type="CPUParticles2D" parent="."]
+position = Vector2(2295, -3219)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D74" type="CPUParticles2D" parent="."]
+position = Vector2(1914, -3315)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D75" type="CPUParticles2D" parent="."]
+position = Vector2(2021, -3668)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D76" type="CPUParticles2D" parent="."]
+position = Vector2(1515, -3793)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D79" type="CPUParticles2D" parent="."]
+position = Vector2(958, -3536)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D80" type="CPUParticles2D" parent="."]
+position = Vector2(1191, -3522)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D81" type="CPUParticles2D" parent="."]
+position = Vector2(844, -3998)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D82" type="CPUParticles2D" parent="."]
+position = Vector2(1248, -4012)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D83" type="CPUParticles2D" parent="."]
+position = Vector2(1624, -4131)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D84" type="CPUParticles2D" parent="."]
+position = Vector2(1272, -4183)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D85" type="CPUParticles2D" parent="."]
+position = Vector2(644, -3927)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D86" type="CPUParticles2D" parent="."]
+position = Vector2(634, -3642)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D87" type="CPUParticles2D" parent="."]
+position = Vector2(967, -3808)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D88" type="CPUParticles2D" parent="."]
+position = Vector2(1048, -4198)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D96" type="CPUParticles2D" parent="."]
+position = Vector2(834, -4393)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D97" type="CPUParticles2D" parent="."]
+position = Vector2(1286, -4531)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D107" type="CPUParticles2D" parent="."]
+position = Vector2(1452, -4549)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D108" type="CPUParticles2D" parent="."]
+position = Vector2(1588, -4640)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D109" type="CPUParticles2D" parent="."]
+position = Vector2(1752, -4597)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D110" type="CPUParticles2D" parent="."]
+position = Vector2(149, -4264)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D111" type="CPUParticles2D" parent="."]
+position = Vector2(1983, -4670)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D112" type="CPUParticles2D" parent="."]
+position = Vector2(2157, -4499)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D98" type="CPUParticles2D" parent="."]
+position = Vector2(2057, -4355)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D99" type="CPUParticles2D" parent="."]
+position = Vector2(2262, -4307)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D100" type="CPUParticles2D" parent="."]
+position = Vector2(1710, -4374)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D101" type="CPUParticles2D" parent="."]
+position = Vector2(1905, -4516)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D102" type="CPUParticles2D" parent="."]
+position = Vector2(1006, -4549)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D113" type="CPUParticles2D" parent="."]
+position = Vector2(1116, -4863)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D114" type="CPUParticles2D" parent="."]
+position = Vector2(1116, -4863)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D116" type="CPUParticles2D" parent="."]
+position = Vector2(1116, -4863)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D117" type="CPUParticles2D" parent="."]
+position = Vector2(815, -4782)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D115" type="CPUParticles2D" parent="."]
+position = Vector2(1493, -4846)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D103" type="CPUParticles2D" parent="."]
+position = Vector2(321, -4415)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D104" type="CPUParticles2D" parent="."]
+position = Vector2(768, -4520)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D105" type="CPUParticles2D" parent="."]
+position = Vector2(768, -4520)
+rotation = 1.79758
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D106" type="CPUParticles2D" parent="."]
+position = Vector2(587, -4501)
+rotation = 1.79758
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D89" type="CPUParticles2D" parent="."]
+position = Vector2(1519, -3989)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D90" type="CPUParticles2D" parent="."]
+position = Vector2(1624, -3913)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D91" type="CPUParticles2D" parent="."]
+position = Vector2(835, -4160)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D92" type="CPUParticles2D" parent="."]
+position = Vector2(450, -4241)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D93" type="CPUParticles2D" parent="."]
+position = Vector2(483, -4099)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D94" type="CPUParticles2D" parent="."]
+position = Vector2(350, -4094)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D95" type="CPUParticles2D" parent="."]
+position = Vector2(255, -4032)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D77" type="CPUParticles2D" parent="."]
+position = Vector2(1900, -4114)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D78" type="CPUParticles2D" parent="."]
+position = Vector2(2246, -4036)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D58" type="CPUParticles2D" parent="."]
+position = Vector2(1711, -3028)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D59" type="CPUParticles2D" parent="."]
+position = Vector2(1457, -2940)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D60" type="CPUParticles2D" parent="."]
+position = Vector2(1334, -2927)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D61" type="CPUParticles2D" parent="."]
+position = Vector2(1720, -2716)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D62" type="CPUParticles2D" parent="."]
+position = Vector2(1814, -2842)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D63" type="CPUParticles2D" parent="."]
+position = Vector2(1993, -2920)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D64" type="CPUParticles2D" parent="."]
+position = Vector2(1989, -3086)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D65" type="CPUParticles2D" parent="."]
+position = Vector2(1459, -3319)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D51" type="CPUParticles2D" parent="."]
+position = Vector2(508, -3056)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D52" type="CPUParticles2D" parent="."]
+position = Vector2(508, -3056)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D44" type="CPUParticles2D" parent="."]
+position = Vector2(644, -2612)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
+[node name="CPUParticles2D45" type="CPUParticles2D" parent="."]
+position = Vector2(644, -2612)
+rotation = 3.14113
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 100)
+scale_amount_min = 4.0
+scale_amount_max = 4.0
+
 [node name="CPUParticles2D43" type="CPUParticles2D" parent="."]
 position = Vector2(836, -2437)
 rotation = 3.14113
@@ -437,6 +1177,30 @@ position = Vector2(1315, -2424)
 rotation = 0.0523599
 scale = Vector2(0.75, 0.75)
 
+[node name="Platform 9" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(1387, -3122)
+rotation = 0.0523599
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform 10" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(1235, -3759)
+rotation = 0.0523599
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform 11" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(1211, -4320)
+rotation = 0.0523599
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform 12" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(1705, -4421)
+rotation = 0.0523599
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform 13" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(1222, -4638)
+scale = Vector2(0.75, 0.75)
+
 [node name="Platform 6" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform 6"]
@@ -455,13 +1219,12 @@ rotation = -0.113446
 shape = SubResource("RectangleShape2D_ur7o3")
 
 [node name="Platform 7" type="Node2D" parent="."]
-position = Vector2(131, -125)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform 7"]
 texture_filter = 1
-position = Vector2(1118, -1255)
+position = Vector2(1238, -1393)
 rotation = 3.14159
-scale = Vector2(1.00676, 0.527926)
+scale = Vector2(0.992581, 0.53525)
 texture = ExtResource("3_fjrke")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Platform 7"]
@@ -469,7 +1232,7 @@ position = Vector2(-8, -5)
 rotation = 0.120428
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform 7/StaticBody2D"]
-position = Vector2(966.409, -1370.02)
+position = Vector2(1070.1, -1528.63)
 rotation = -0.113446
 shape = SubResource("RectangleShape2D_ur7o3")
 
@@ -493,6 +1256,21 @@ position = Vector2(1938, -1538)
 rotation = -1.57429
 scale = Vector2(0.75, 0.75)
 
+[node name="Platform Vertical9" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(913, -2973)
+rotation = -1.57429
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform Vertical10" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(2157, -3496)
+rotation = -1.57429
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform Vertical11" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(354, -4048)
+rotation = -4.74555
+scale = Vector2(0.75, 0.75)
+
 [node name="Platform Vertical5" parent="." instance=ExtResource("1_hm17a")]
 position = Vector2(1684, -1792)
 rotation = -4.76824
@@ -510,6 +1288,10 @@ scale = Vector2(0.625, 0.625)
 position = Vector2(-444.521, -361.376)
 rotation = -2.99149
 
+[node name="Spike4" parent="Platform Vertical5" instance=ExtResource("4_35fon")]
+position = Vector2(-1472.26, 1301.18)
+rotation = -6.28319
+
 [node name="Platform Vertical6" parent="." instance=ExtResource("1_hm17a")]
 position = Vector2(2002, -2021)
 rotation = -1.53764
@@ -517,6 +1299,11 @@ scale = Vector2(0.75, 0.75)
 
 [node name="Platform Vertical7" parent="." instance=ExtResource("1_hm17a")]
 position = Vector2(1724, -2211)
+rotation = -4.76824
+scale = Vector2(0.75, 0.75)
+
+[node name="Platform Vertical8" parent="." instance=ExtResource("1_hm17a")]
+position = Vector2(575, -2720)
 rotation = -4.76824
 scale = Vector2(0.75, 0.75)
 
@@ -546,11 +1333,31 @@ texture = ExtResource("5_bwxqu")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(512, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_filter = 1
-position = Vector2(529.75, 130.5)
+position = Vector2(434, 137)
+scale = Vector2(4.7886, 6.13125)
+texture = ExtResource("6_nh5xg")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+position = Vector2(850, 135)
+scale = Vector2(4.7886, 6.13125)
+texture = ExtResource("6_nh5xg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+position = Vector2(1242, 147)
+scale = Vector2(4.7886, 6.13125)
+texture = ExtResource("6_nh5xg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+position = Vector2(158, 173)
 scale = Vector2(4.7886, 6.13125)
 texture = ExtResource("6_nh5xg")
 

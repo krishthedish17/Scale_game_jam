@@ -2026,7 +2026,7 @@ size = Vector2(342, 67)
 [node name="Level 3 Scene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_kip3p")]
-position = Vector2(713, 273)
+position = Vector2(1.765, 169.735)
 
 [node name="Start_totem" parent="." instance=ExtResource("2_ss5i5")]
 position = Vector2(2, 213)
@@ -2748,7 +2748,7 @@ thanks for the help dude"
 label_settings = ExtResource("15_yeoub")
 
 [node name="water" parent="Fish/Label2" instance=ExtResource("16_cnnn7")]
-position = Vector2(-4089, -425)
+position = Vector2(-4139, -466)
 scale = Vector2(15.6822, 3.81276)
 
 [node name="Label3" type="Label" parent="Fish"]
