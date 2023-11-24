@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://gcpddc1eijcl"]
+[gd_scene load_steps=34 format=3 uid="uid://gcpddc1eijcl"]
 
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="1_kip3p"]
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="2_ss5i5"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bfdij21pgm78q" path="res://fish scale/fish_scale.tscn" id="17_h3uq3"]
 [ext_resource type="Script" path="res://Level 3/Level3wintext.gd" id="18_lqox5"]
 [ext_resource type="PackedScene" uid="uid://b8yc5smd1dm6v" path="res://level 3 spike/level_3_spike.tscn" id="19_3fkry"]
+[ext_resource type="AudioStream" uid="uid://bvx4b3tb2313s" path="res://Music/level_3_ost_scale_jam_song.wav" id="21_joiyt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vm8i8"]
 texture = ExtResource("2_ygsnl")
@@ -3011,6 +3012,10 @@ scale = Vector2(2, 2)
 [node name="level_3_spike49" parent="traps" instance=ExtResource("19_3fkry")]
 position = Vector2(6652, 216)
 scale = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_joiyt")
+autoplay = true
 
 [connection signal="body_entered" from="Tilemaps/map base group 3/hidden area" to="Tilemaps/map base group 3/hidden area" method="_on_body_entered"]
 [connection signal="body_exited" from="Tilemaps/map base group 3/hidden area" to="Tilemaps/map base group 3/hidden area" method="_on_body_exited"]

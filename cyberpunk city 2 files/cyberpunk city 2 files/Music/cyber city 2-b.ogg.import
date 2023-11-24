@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bi8xm8jtepix3"
+path="res://.godot/imported/cyber city 2-b.ogg-6fd565b6167549127013d97dedda3577.oggvorbisstr"
+
+[deps]
+
+source_file="res://cyberpunk city 2 files/cyberpunk city 2 files/Music/cyber city 2-b.ogg"
+dest_files=["res://.godot/imported/cyber city 2-b.ogg-6fd565b6167549127013d97dedda3577.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
