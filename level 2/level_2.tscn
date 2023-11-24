@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck2us3bypbyqd"]
+[gd_scene load_steps=15 format=3 uid="uid://ck2us3bypbyqd"]
 
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="1_hm17a"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="2_481lv"]
@@ -10,9 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://bonvwrdmn87au" path="res://level 2/paralaxx background/parallax-mountain-montain-far.png" id="6_nh5xg"]
 [ext_resource type="Texture2D" uid="uid://d2ekrqiwhemr2" path="res://level 2/paralaxx background/parallax-mountain-mountains.png" id="7_xkhbm"]
 [ext_resource type="Texture2D" uid="uid://dxj4s2gdnc0uf" path="res://level 2/paralaxx background/parallax-mountain-trees.png" id="8_r6k6w"]
+[ext_resource type="Texture2D" uid="uid://ldhd3wu1a0c2" path="res://flagpoletransition/flagpole.png" id="11_brlge"]
+[ext_resource type="Script" path="res://level 2/LevelTransition.gd" id="12_x0bks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7o3"]
 size = Vector2(657.117, 104.844)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm6hu"]
+size = Vector2(15.264, 20)
 
 [node name="Level 2" type="Node2D"]
 
@@ -1377,3 +1382,18 @@ texture_filter = 1
 position = Vector2(765.812, 295.75)
 scale = Vector2(4.03745, 4.85313)
 texture = ExtResource("8_r6k6w")
+
+[node name="LevelTransition" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1196, -4712)
+scale = Vector2(3.60938, 3.92183)
+texture = ExtResource("11_brlge")
+script = ExtResource("12_x0bks")
+
+[node name="Area2D" type="Area2D" parent="LevelTransition"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTransition/Area2D"]
+position = Vector2(-3.04761, -4.07983)
+shape = SubResource("RectangleShape2D_tm6hu")
+
+[connection signal="body_entered" from="LevelTransition/Area2D" to="LevelTransition" method="_on_area_2d_body_entered"]
