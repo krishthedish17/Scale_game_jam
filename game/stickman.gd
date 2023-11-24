@@ -71,9 +71,13 @@ func _physics_process(delta):
 		if velocity.y >= 0:
 			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
 			
-	if Input.is_action_just_pressed("dash") && GameManager.level > 2:
+	if Input.is_action_just_pressed("dash") && GameManager.level > 2 && GameManager.dash_count <= 3:
 		print("dash")
 		dash.start_dash(dash_length)
+		print(GameManager.dash_count)
+		GameManager.dash_count += 1
+	if is_on_floor():
+		GameManager.dash_count = 0
 	var speed = dash_speed if dash.is_dashing() else current_speed
 	if dash.is_dashing():
 		dashing = true

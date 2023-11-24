@@ -10,6 +10,7 @@ var is_small: bool = false
 var level: int = 1
 var scales_collected: int = 0
 var level3win: bool = false
+var dash_count: int = 0
 
 func load_game_scene() -> void:
 	get_tree().change_scene_to_packed(game_scene)
