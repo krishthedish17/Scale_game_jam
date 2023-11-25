@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd1tgcnkuwipu"]
+
+[ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="1_h1km3"]
+[ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="2_ttpqc"]
+[ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="3_awhuq"]
+
+[node name="Level_4_scene" type="Node2D"]
+
+[node name="Start_totem" parent="." instance=ExtResource("1_h1km3")]
+position = Vector2(4, -64)
+level_mark = 4
+
+[node name="void_of_death" parent="." instance=ExtResource("2_ttpqc")]
+
+[node name="Player" parent="." instance=ExtResource("3_awhuq")]
+position = Vector2(8, -140)

@@ -22,4 +22,4 @@ func _on_area_2d_body_entered(body):
 		GameManager.level3win = true
 		await get_tree().create_timer(3).timeout
 		print("You beat level 3")
-		GameManager.load_level_2_scene()
+		GameManager.load_level_4_scene()
