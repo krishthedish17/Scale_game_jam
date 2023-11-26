@@ -6,17 +6,21 @@ var is_inside_dropable = false
 var body_ref
 var offset: Vector2
 var initialPos: Vector2
+var clicked: bool = false
 func _process(delta):
+	if Input.is_action_just_pressed(("click")):
+		clicked = true
+		print("clicking")
+	if Input.is_action_just_released("click"):
+		clicked = false
+		print("not clicking")
 	if draggable:
-		if Input.is_action_just_pressed("click"):
-			initialPos = global_position
-			offset = get_global_mouse_position() - global_position
+		if clicked == true:
 			GameManager.is_dragging = true
-		
-		if Input.is_action_just_pressed("click"):
-			global_position = get_global_mouse_position() - offset
+		if clicked == true:
+			global_position = get_local_mouse_position()
 			
-		elif Input.is_action_just_released("click"):
+		elif clicked == false:
 			GameManager.is_dragging = false
 			var tween = get_tree().create_tween()
 			if is_inside_dropable:
