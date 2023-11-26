@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bd1tgcnkuwipu"]
+[gd_scene load_steps=9 format=3 uid="uid://bd1tgcnkuwipu"]
 
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="1_h1km3"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="2_ttpqc"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="3_awhuq"]
 [ext_resource type="Texture2D" uid="uid://c6vl2lvvsaxja" path="res://download (1).png" id="4_a46qd"]
 [ext_resource type="Texture2D" uid="uid://botklm8ukg1pn" path="res://PaperConquestSprites/TX Village Props.png" id="5_bmwg7"]
+[ext_resource type="AudioStream" uid="uid://drvgfwpkoucq6" path="res://Music/level_4_ost_scale_jam_song.wav" id="6_iiv4k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02roe"]
 texture = ExtResource("5_bmwg7")
@@ -1363,3 +1364,7 @@ polygon = PackedVector2Array(53.0923, 118.173, 51.9505, 160.419, 56.3273, 160.41
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/StaticBody2D2"]
 polygon = PackedVector2Array(184.586, 110.561, 194.291, 111.323, 211.365, 102.984, 267.935, 75.3568, 303.52, 74.5956, 303.901, 69.2674, 268.696, 69.6479)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_iiv4k")
+autoplay = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ck2us3bypbyqd"]
+[gd_scene load_steps=16 format=3 uid="uid://ck2us3bypbyqd"]
 
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="1_hm17a"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="2_481lv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dxj4s2gdnc0uf" path="res://level 2/paralaxx background/parallax-mountain-trees.png" id="8_r6k6w"]
 [ext_resource type="Texture2D" uid="uid://ldhd3wu1a0c2" path="res://flagpoletransition/flagpole.png" id="11_brlge"]
 [ext_resource type="Script" path="res://level 2/LevelTransition.gd" id="12_x0bks"]
+[ext_resource type="AudioStream" uid="uid://cu6enyyqktj0y" path="res://Music/level_2_ost_scale_jam_song updated.wav" id="13_7lof6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7o3"]
 size = Vector2(657.117, 104.844)
@@ -1395,5 +1396,9 @@ script = ExtResource("12_x0bks")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTransition/Area2D"]
 position = Vector2(-3.04761, -4.07983)
 shape = SubResource("RectangleShape2D_tm6hu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_7lof6")
+autoplay = true
 
 [connection signal="body_entered" from="LevelTransition/Area2D" to="LevelTransition" method="_on_area_2d_body_entered"]

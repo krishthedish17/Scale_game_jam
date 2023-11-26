@@ -11,6 +11,7 @@ var is_small: bool = false
 var level: int = 1
 var scales_collected: int = 0
 var level3win: bool = false
+var level5win: bool = false
 var dash_count: int = 0
 var is_paused: bool = false
 func start():
@@ -32,6 +33,8 @@ func load_level_3_scene() -> void:
 func load_level_4_scene() -> void:
 	get_tree().change_scene_to_packed(level_4_scene)
 	level = 4
+	GameManager.level5win = false
 func load_level_5_scene() -> void:
 	get_tree().change_scene_to_packed(level_5_scene)
 	level = 5
+	GameManager.level5win = false

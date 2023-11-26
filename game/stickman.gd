@@ -118,6 +118,7 @@ func _process(_delta):
 	grow()
 	restart()
 	time_stop()
+	portal_anim()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
@@ -243,7 +244,7 @@ func restart():
 	if Input.is_action_just_pressed("restart"):
 		death()
 func time_stop():
-	if Input.is_action_just_pressed("time stop") && pause_times == 0 && can_pause == true:
+	if Input.is_action_just_pressed("time stop") && pause_times == 0 && can_pause == true && GameManager.level >= 5:
 		pause_times += 1
 		can_pause = false
 		GameManager.is_paused = true
@@ -259,3 +260,7 @@ func _on_stop_timer_timeout():
 func _on_stop_cooldown_timeout():
 	print(can_pause)
 	can_pause = true
+	
+func portal_anim():
+	if GameManager.level5win == true:
+		$AnimatedSprite2D/AnimationPlayer.play("portal enter")
