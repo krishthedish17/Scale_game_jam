@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bbiehda0s4pmv"]
+[gd_scene load_steps=2 format=3 uid="uid://bbiehda0s4pmv"]
 
-[node name="platform" type="StaticBody2D"]
+[ext_resource type="Script" path="res://drag_n_drop.gd" id="1_8q8m7"]
+
+[node name="platform" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_8q8m7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

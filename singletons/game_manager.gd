@@ -38,3 +38,4 @@ func load_level_5_scene() -> void:
 	get_tree().change_scene_to_packed(level_5_scene)
 	level = 5
 	GameManager.level5win = false
+var is_dragging = false
