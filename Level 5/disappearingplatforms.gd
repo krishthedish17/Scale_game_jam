@@ -1,6 +1,6 @@
 extends TileMap
 
-@export var show_time: int = 1
+@export var show_time: int = 2
 var timer: int = 0
 @export var max_time: int = 8
 var _timer = null
@@ -16,12 +16,12 @@ func _process(delta):
 func wait(x):
 	platform_timer.wait_time = x
 	platform_timer.start()
-	print("timer done")
 	return !platform_timer.is_stopped()
 
 func platform_appear():
 	timer += 1
-	wait(1)
+	print("Start timer")
+	wait(15)
 	print("timer done")
 	if show_time == timer:
 		self.visible = true

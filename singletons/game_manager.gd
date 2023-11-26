@@ -12,6 +12,7 @@ var level: int = 1
 var scales_collected: int = 0
 var level3win: bool = false
 var dash_count: int = 0
+var is_paused: bool = false
 func start():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 func load_game_scene() -> void:

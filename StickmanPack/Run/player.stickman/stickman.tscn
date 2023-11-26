@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dvdetwkhreyjx"]
+[gd_scene load_steps=46 format=3 uid="uid://dvdetwkhreyjx"]
 
 [ext_resource type="Script" path="res://game/stickman.gd" id="1_8dh4m"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="2_x0st5"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://ddxuo8pp2a108" path="res://hook sprites/link.png" id="5_1b365"]
 [ext_resource type="Script" path="res://grapple_hook.gd" id="6_rdni3"]
 [ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/camera.gd" id="7_fuwlg"]
+[ext_resource type="Shader" path="res://StickmanPack/Run/player.stickman/timestop.gdshader" id="9_engfj"]
 [ext_resource type="PackedScene" uid="uid://3l5urwp8pqpq" path="res://dash/dash.tscn" id="9_jsd3u"]
+[ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/time_effect.gd" id="10_uc088"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5pd8"]
 atlas = ExtResource("3_w760s")
@@ -258,7 +260,11 @@ height = 60.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27oav"]
 size = Vector2(44, 64)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn1gc"]
+shader = ExtResource("9_engfj")
+
 [node name="Player" type="Node2D"]
+process_mode = 3
 
 [node name="Stickman" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(1, -2)
@@ -274,10 +280,12 @@ position = Vector2(-2, 4)
 shape = SubResource("CapsuleShape2D_kls8d")
 
 [node name="pivot" type="Node2D" parent="Stickman"]
+process_mode = 3
 position = Vector2(-2, 3)
 script = ExtResource("4_ojwhu")
 
 [node name="link" type="Sprite2D" parent="Stickman/pivot"]
+process_mode = 3
 texture_repeat = 2
 rotation = -1.5708
 texture = ExtResource("5_1b365")
@@ -286,6 +294,7 @@ region_rect = Rect2(0.549, -0.072, 15.523, 16)
 script = ExtResource("6_rdni3")
 
 [node name="RayCast2D" type="RayCast2D" parent="Stickman/pivot/link"]
+process_mode = 3
 target_position = Vector2(0, 300)
 
 [node name="Collision" type="Area2D" parent="Stickman"]
@@ -308,6 +317,31 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 script = ExtResource("7_fuwlg")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Stickman/Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Stickman/Camera2D/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.462745)
+self_modulate = Color(1, 1, 1, 0.333333)
+material = SubResource("ShaderMaterial_gn1gc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(24.08, 13.4)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("10_uc088")
+
 [node name="dash" parent="Stickman" instance=ExtResource("9_jsd3u")]
 
+[node name="Stop_timer" type="Timer" parent="Stickman"]
+wait_time = 5.0
+one_shot = true
+
+[node name="stop_cooldown" type="Timer" parent="Stickman"]
+one_shot = true
+
 [connection signal="hooked" from="Stickman/pivot/link" to="Stickman" method="_on_link_hooked"]
+[connection signal="timeout" from="Stickman/Stop_timer" to="Stickman" method="_on_stop_timer_timeout"]
+[connection signal="timeout" from="Stickman/stop_cooldown" to="Stickman" method="_on_stop_cooldown_timeout"]

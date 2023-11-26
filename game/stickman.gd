@@ -14,8 +14,11 @@ var water_grav = 0.25
 var water_speed = 0.25
 var pause_times = 0
 var slowed = false
+var can_pause = true
 
 @onready var dash = $dash
+@onready var timer = $Stop_timer
+@onready var stop_cooldown = $stop_cooldown
 
 
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
@@ -240,9 +243,19 @@ func restart():
 	if Input.is_action_just_pressed("restart"):
 		death()
 func time_stop():
-	if Input.is_action_just_pressed("time stop"):
+	if Input.is_action_just_pressed("time stop") && pause_times == 0 && can_pause == true:
 		pause_times += 1
+		can_pause = false
+		GameManager.is_paused = true
 		get_tree().paused = !get_tree().paused
-		if pause_times % 2 == 0:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		
+		timer.start(3)
+
+func _on_stop_timer_timeout():
+	get_tree().paused = !get_tree().paused
+	GameManager.is_paused = false
+	pause_times = 0
+	print(can_pause)
+	stop_cooldown.start(3)
+func _on_stop_cooldown_timeout():
+	print(can_pause)
+	can_pause = true
