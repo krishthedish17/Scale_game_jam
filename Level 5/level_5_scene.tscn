@@ -13,6 +13,40 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xjfu"]
 size = Vector2(648, 186)
 
+[sub_resource type="Animation" id="Animation_mtyli"]
+resource_name = "PLATFORM 5"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4, 6, 8, 10, 12, 14, 16),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(11784, -64), Vector2(11800, -640), Vector2(12816, -208), Vector2(14192, -416), Vector2(15184, -88), Vector2(14192, -416), Vector2(12816, -208), Vector2(11800, -640), Vector2(11784, -64)]
+}
+
+[sub_resource type="Animation" id="Animation_wl4qq"]
+resource_name = "Platform 6"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(21544, -136), Vector2(23000, -136), Vector2(21544, -136)]
+}
+
 [sub_resource type="Animation" id="Animation_qu2e3"]
 length = 16.0
 tracks/0/type = "value"
@@ -62,23 +96,6 @@ tracks/0/keys = {
 "values": [Vector2(3457, -783), Vector2(4945, -59), Vector2(3457, -783)]
 }
 
-[sub_resource type="Animation" id="Animation_07eml"]
-resource_name = "platform move"
-length = 8.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1008, 3), Vector2(2000, 3), Vector2(1008, 3)]
-}
-
 [sub_resource type="Animation" id="Animation_2pyed"]
 resource_name = "platform 4"
 length = 8.0
@@ -96,9 +113,9 @@ tracks/0/keys = {
 "values": [Vector2(9024, 96), Vector2(9016, -896), Vector2(9024, 96)]
 }
 
-[sub_resource type="Animation" id="Animation_mtyli"]
-resource_name = "PLATFORM 5"
-length = 16.0
+[sub_resource type="Animation" id="Animation_07eml"]
+resource_name = "platform move"
+length = 8.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -107,27 +124,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4, 6, 8, 10, 12, 14, 16),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(11784, -64), Vector2(11800, -640), Vector2(12816, -208), Vector2(14192, -416), Vector2(15184, -88), Vector2(14192, -416), Vector2(12816, -208), Vector2(11800, -640), Vector2(11784, -64)]
-}
-
-[sub_resource type="Animation" id="Animation_wl4qq"]
-resource_name = "Platform 6"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 4),
+"times": PackedFloat32Array(0, 4, 8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(21544, -136), Vector2(23000, -136), Vector2(21544, -136)]
+"values": [Vector2(1008, 3), Vector2(2000, 3), Vector2(1008, 3)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s0vbd"]
@@ -554,6 +554,7 @@ scale = Vector2(5, 5)
 motion_mirroring = Vector2(300, 150)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Main bg/ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
 texture = ExtResource("6_eu4gb")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Backgrounds/Main bg/ParallaxBackground"]
@@ -562,6 +563,7 @@ scale = Vector2(5, 5)
 motion_mirroring = Vector2(300, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Main bg/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
 texture = ExtResource("5_grkhp")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Backgrounds/Main bg/ParallaxBackground"]
@@ -570,6 +572,7 @@ scale = Vector2(5, 5)
 motion_mirroring = Vector2(300, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Main bg/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
 texture = ExtResource("7_yk41s")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Backgrounds/Main bg/ParallaxBackground"]
@@ -578,6 +581,7 @@ scale = Vector2(5, 5)
 motion_mirroring = Vector2(300, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Main bg/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
 texture = ExtResource("8_qqp0f")
 
 [connection signal="body_entered" from="Tilemaps/Falling platform/Area2D" to="Tilemaps/Falling platform" method="_on_area_2d_body_entered"]
