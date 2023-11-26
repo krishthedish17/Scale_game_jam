@@ -11,14 +11,16 @@ func _process(delta):
 	if Input.is_action_just_pressed(("click")):
 		clicked = true
 		print("clicking")
+		
 	if Input.is_action_just_released("click"):
 		clicked = false
 		print("not clicking")
 	if draggable:
 		if clicked == true:
 			GameManager.is_dragging = true
+			offset = get_local_mouse_position() - global_position
 		if clicked == true:
-			global_position = get_local_mouse_position()
+			global_position = get_local_mouse_position() - offset
 			
 		elif clicked == false:
 			GameManager.is_dragging = false
