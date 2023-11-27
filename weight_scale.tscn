@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpfyekgyavxv6"]
+[gd_scene load_steps=9 format=3 uid="uid://i6wp8vftv3iw"]
 
 [ext_resource type="Script" path="res://weight_scale.gd" id="1_xhe83"]
 [ext_resource type="Texture2D" uid="uid://dy6lk823wgu6s" path="res://image (3).png" id="2_lyg8f"]
@@ -54,6 +54,7 @@ script = ExtResource("1_xhe83")
 position = Vector2(245, 568)
 sprite_frames = SubResource("SpriteFrames_jqlvs")
 animation = &"activate_door"
+frame_progress = 0.659145
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(162, 505)

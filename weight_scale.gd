@@ -8,7 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	animate_sprite()
+	if not GameManager.blocks_collected == 3:
+		animate_sprite()
 func animate_sprite():
 	weight_sprite.play("Idle")
 
