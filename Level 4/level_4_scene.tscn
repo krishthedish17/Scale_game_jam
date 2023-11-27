@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd1tgcnkuwipu"]
+[gd_scene load_steps=11 format=3 uid="uid://bd1tgcnkuwipu"]
 
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="1_h1km3"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="2_ttpqc"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c6vl2lvvsaxja" path="res://download (1).png" id="4_a46qd"]
 [ext_resource type="Texture2D" uid="uid://botklm8ukg1pn" path="res://PaperConquestSprites/TX Village Props.png" id="5_bmwg7"]
 [ext_resource type="AudioStream" uid="uid://drvgfwpkoucq6" path="res://Music/level_4_ost_scale_jam_song.wav" id="6_iiv4k"]
+[ext_resource type="PackedScene" uid="uid://bpfyekgyavxv6" path="res://weight_scale.tscn" id="7_f24xl"]
+[ext_resource type="PackedScene" uid="uid://lvcf3y8pm2ag" path="res://abc_blocks.tscn" id="8_em5mu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02roe"]
 texture = ExtResource("5_bmwg7")
@@ -1368,3 +1370,22 @@ polygon = PackedVector2Array(184.586, 110.561, 194.291, 111.323, 211.365, 102.98
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_iiv4k")
 autoplay = true
+
+[node name="weight_scale" parent="." instance=ExtResource("7_f24xl")]
+position = Vector2(272, 214)
+scale = Vector2(0.625, 0.625)
+
+[node name="ABC_Blocks1" parent="." instance=ExtResource("8_em5mu")]
+texture_filter = 1
+position = Vector2(818, 602)
+scale = Vector2(0.22, 0.22)
+
+[node name="ABC_Blocks2" parent="." instance=ExtResource("8_em5mu")]
+texture_filter = 1
+position = Vector2(901, 608)
+scale = Vector2(0.22, 0.22)
+
+[node name="ABC_Blocks3" parent="." instance=ExtResource("8_em5mu")]
+texture_filter = 1
+position = Vector2(729, 612)
+scale = Vector2(0.22, 0.22)

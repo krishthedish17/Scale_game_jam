@@ -2529,6 +2529,7 @@ position = Vector2(-1956, 2815)
 
 [node name="Background" type="Sprite2D" parent="Backgrounds/Background_layered36"]
 z_index = -3
+texture_filter = 1
 position = Vector2(-1.00002, -7.50001)
 scale = Vector2(6.84408, 3.77649)
 texture = ExtResource("2_v45y0")

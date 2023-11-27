@@ -10,8 +10,10 @@ var is_big : bool = false
 var is_small: bool = false
 var level: int = 1
 var scales_collected: int = 0
+var blocks_collected: int = 0
 var level3win: bool = false
 var level5win: bool = false
+var level4win: bool = false
 var dash_count: int = 0
 var is_paused: bool = false
 func start():
