@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd1tgcnkuwipu"]
+[gd_scene load_steps=12 format=3 uid="uid://bd1tgcnkuwipu"]
 
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="1_h1km3"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="2_ttpqc"]
@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c6vl2lvvsaxja" path="res://download (1).png" id="4_a46qd"]
 [ext_resource type="Texture2D" uid="uid://botklm8ukg1pn" path="res://PaperConquestSprites/TX Village Props.png" id="5_bmwg7"]
 [ext_resource type="AudioStream" uid="uid://drvgfwpkoucq6" path="res://Music/level_4_ost_scale_jam_song.wav" id="6_iiv4k"]
-[ext_resource type="PackedScene" uid="uid://i6wp8vftv3iw" path="res://weight_scale.tscn" id="7_f24xl"]
-[ext_resource type="PackedScene" path="res://abc_blocks.tscn" id="8_em5mu"]
+[ext_resource type="PackedScene" uid="uid://bpfyekgyavxv6" path="res://weight_scale.tscn" id="7_f24xl"]
+[ext_resource type="PackedScene" uid="uid://lvcf3y8pm2ag" path="res://abc_blocks.tscn" id="8_em5mu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02roe"]
 texture = ExtResource("5_bmwg7")
@@ -1323,6 +1323,9 @@ texture = ExtResource("5_bmwg7")
 [sub_resource type="TileSet" id="TileSet_e658u"]
 sources/0 = SubResource("TileSetAtlasSource_02roe")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cuf6"]
+size = Vector2(136.5, 172.5)
+
 [node name="Level_4_scene" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -1389,3 +1392,9 @@ scale = Vector2(0.22, 0.22)
 texture_filter = 1
 position = Vector2(729, 612)
 scale = Vector2(0.22, 0.22)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(344.75, 536.25)
+shape = SubResource("RectangleShape2D_0cuf6")
