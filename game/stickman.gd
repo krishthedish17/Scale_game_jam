@@ -49,7 +49,6 @@ func _ready():
 
 
 func _physics_process(delta):
-	
 	if not is_on_floor():
 		if in_water == true:
 			velocity.y += gravity * delta * water_grav

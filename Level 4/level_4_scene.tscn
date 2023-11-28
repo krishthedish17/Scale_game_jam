@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://botklm8ukg1pn" path="res://PaperConquestSprites/TX Village Props.png" id="5_bmwg7"]
 [ext_resource type="AudioStream" uid="uid://drvgfwpkoucq6" path="res://Music/level_4_ost_scale_jam_song.wav" id="6_iiv4k"]
 [ext_resource type="PackedScene" uid="uid://bpfyekgyavxv6" path="res://weight_scale.tscn" id="7_f24xl"]
-[ext_resource type="PackedScene" uid="uid://lvcf3y8pm2ag" path="res://abc_blocks.tscn" id="8_em5mu"]
+[ext_resource type="PackedScene" path="res://abc_blocks.tscn" id="8_em5mu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02roe"]
 texture = ExtResource("5_bmwg7")
