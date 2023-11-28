@@ -512,6 +512,7 @@ scale = Vector2(-4, 4)
 script = ExtResource("4_8i87r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss"]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_joo1e")
 animation = &"shooting arm"
 frame_progress = 0.669456
