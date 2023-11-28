@@ -69,6 +69,7 @@ func _process(delta):
 	if weapon == 3:
 		if boomerang_selected == false:
 			boomerang_type = randi_range(1, 2)
+			boomerang_selected = true
 		weapon_selected = true
 		bullet_sprite.play("fire boomerang")
 		if GameManager.shooting_arm == true || shooting == true:
@@ -100,6 +101,7 @@ func _process(delta):
 					distance = 0
 					shooting = false
 					weapon_selected = false
+					boomerang_selected = false
 
 
 func _on_bullet_connected(body):
