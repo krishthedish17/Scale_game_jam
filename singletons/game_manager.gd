@@ -39,6 +39,8 @@ func load_level_4_scene() -> void:
 	get_tree().change_scene_to_packed(level_4_scene)
 	level = 4
 	GameManager.level5win = false
+	blocks_collected = 0
+	GameManager.level4win = false
 func load_level_5_scene() -> void:
 	get_tree().change_scene_to_packed(level_5_scene)
 	level = 5

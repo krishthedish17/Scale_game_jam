@@ -529,14 +529,12 @@ animation = &"new_animation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/AnimatedSprite2D/bullets/Area2D"]
 z_index = -1
 position = Vector2(-4.79999, 1.6)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_llt2f")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Boss/AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/AnimatedSprite2D/CharacterBody2D"]
 position = Vector2(-0.399963, 14.4)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_x03hx")
 
 [node name="cooldown" type="Timer" parent="Boss"]

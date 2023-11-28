@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://d2178pv3x82a4"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_di610"]
+[ext_resource type="Texture2D" uid="uid://wj1s4ragm7hb" path="res://New Piskel.png" id="2_ehlon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmtb5"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxnx4"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo4mh"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raly2"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfi0l"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bvi3"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7rtq"]
+atlas = ExtResource("2_ehlon")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgp8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmtb5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxnx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo4mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raly2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfi0l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bvi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7rtq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xq566"]
+radius = 6.0
+
+[node name="door" type="Node2D"]
+script = ExtResource("1_di610")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.999996, -1)
+scale = Vector2(0.625, 0.625)
+sprite_frames = SubResource("SpriteFrames_bgp8t")
+frame_progress = 0.0999108
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xq566")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
