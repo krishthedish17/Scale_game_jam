@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dvdetwkhreyjx"]
+[gd_scene load_steps=60 format=3 uid="uid://dvdetwkhreyjx"]
 
 [ext_resource type="Script" path="res://game/stickman.gd" id="1_8dh4m"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="2_x0st5"]
@@ -11,6 +11,73 @@
 [ext_resource type="Shader" path="res://StickmanPack/Run/player.stickman/timestop.gdshader" id="9_engfj"]
 [ext_resource type="PackedScene" uid="uid://3l5urwp8pqpq" path="res://dash/dash.tscn" id="9_jsd3u"]
 [ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/time_effect.gd" id="10_uc088"]
+[ext_resource type="Texture2D" uid="uid://cgf3fgg2is1b7" path="res://level 6 assests/Red Effect Bullet Impact Explosion 32x32.png" id="12_3a8ja"]
+[ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/bullet.gd" id="13_2syd1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxfdf"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4d5y"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s0dm"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(256, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bopie"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62i5m"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(32, 448, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5gji"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4xi3"]
+atlas = ExtResource("12_3a8ja")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbjg6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxfdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4d5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s0dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bopie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62i5m")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5gji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4xi3")
+}],
+"loop": true,
+"name": &"travel",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jm7t"]
+size = Vector2(12, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5pd8"]
 atlas = ExtResource("3_w760s")
@@ -302,6 +369,19 @@ shader = ExtResource("9_engfj")
 
 [node name="Player" type="Node2D"]
 process_mode = 3
+
+[node name="bullet" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qbjg6")
+animation = &"explode"
+frame = 4
+frame_progress = 1.0
+script = ExtResource("13_2syd1")
+
+[node name="Area2D" type="Area2D" parent="bullet"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullet/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_7jm7t")
 
 [node name="Stickman" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(-1, -1)

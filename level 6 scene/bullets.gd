@@ -27,6 +27,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GameManager.second_phase == true:
+		speed = 225
+	else:
+		speed = 175
 	if weapon_selected == false:
 		weapon = randi_range(1, 3)
 	if weapon == 1:
@@ -68,6 +72,10 @@ func _process(delta):
 				weapon_selected = false
 	if weapon == 3:
 		if boomerang_selected == false:
+			if GameManager.second_phase == false:
+				boomerang_type = randi_range(1, 2)
+			boomerang_selected = true
+		if GameManager.second_phase == true:
 			boomerang_type = randi_range(1, 2)
 			boomerang_selected = true
 		weapon_selected = true

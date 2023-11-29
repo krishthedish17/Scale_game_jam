@@ -1,6 +1,6 @@
 extends Node2D
 
-var health = 100
+var health = 15
 @onready var sprite = $AnimatedSprite2D
 @onready var boss = $AnimatedSprite2D/CharacterBody2D
 @onready var cooldown = $cooldown
@@ -17,27 +17,40 @@ var can_attack = false
 var boss_attack = RandomNumberGenerator.new()
 var started_fight = false
 var current_attack = 0
+var low_health = false
+var death_activated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	GameManager.second_phase = false
+	GameManager.boss_dead = false
+	death_activated = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if started_fight != true:
-		start_fight()
-	if GameManager.fight_start == true || started_fight == true:
+	if GameManager.boss_dead == true || GameManager.boss_dead == false:
 		animate()
-		if can_attack == true:
-			choose_attack()
-			print("attack chosen")
-			#await get_tree().create_timer(5).timeout
-			#print("post timer")
-	
-func _physics_process(delta):
-	if moving == true:
-		boss.position.x += 200
+	if dead == true && death_activated == false:
+		GameManager.boss_dead = true
+		death_activated = true
+	elif dead == false || death_activated == false:
+		if started_fight != true:
+			start_fight()
+		if GameManager.fight_start == true || started_fight == true && health != 0:
+			animate()
+			if can_attack == true:
+				choose_attack()
+				print("attack chosen")
+				#await get_tree().create_timer(5).timeout
+				#print("post timer")
+	if health <= 0:
+		dead = true
+	if GameManager.hit_shot == true:
+		health -= 1
+		GameManager.hit_shot = false
+		print(str(health) + "health")
+		
 
 func animate():
 	#print("animating")
@@ -55,8 +68,18 @@ func animate():
 		print("shooting arm")
 	if dead == true:
 		sprite.play("dead")
-	if health == 25:
+		await get_tree().create_timer(0.9).timeout
+		GameManager.boss_dead = false
+	if low_health == true:
+		health = 5
 		sprite.play("low health")
+		await get_tree().create_timer(2).timeout
+		GameManager.second_phase = true
+		low_health = false
+		health = 4
+		print(str(health) + "health")
+	if health == 5:
+		low_health = true
 	#if moving == true:
 		#sprite.play("move")
 		#print("drifting")
@@ -73,12 +96,6 @@ func choose_attack():
 	if current_attack == 1:
 		idle = true
 		print("idle" + str(idle))
-	#if current_attack == 2:
-		#idle = false
-		#moving = true
-		#print("moving" + str(moving))
-		#await get_tree().create_timer(2).timeout
-		#moving = false
 	if current_attack == 2:
 		idle = false
 		shooting_arm = true

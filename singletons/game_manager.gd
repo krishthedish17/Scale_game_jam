@@ -19,6 +19,9 @@ var dash_count: int = 0
 var is_paused: bool = false
 var fight_start: bool = false
 var shooting_arm: bool = false
+var second_phase: bool = false
+var hit_shot: bool = false
+var boss_dead: bool = false
 func start():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 func load_game_scene() -> void:
