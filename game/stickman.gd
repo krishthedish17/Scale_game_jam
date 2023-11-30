@@ -130,6 +130,8 @@ func player_animations():
 	particle_trails = false
 	
 	if is_on_floor():
+		if GameManager.lock_player == true:
+			player_sprite.play("Idle")
 		if abs(velocity.x) > 0:
 			particle_trails = true
 			player_sprite.play("Sprint", 1.5)

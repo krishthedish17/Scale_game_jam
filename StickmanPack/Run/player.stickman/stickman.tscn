@@ -309,8 +309,7 @@ script = ExtResource("1_8dh4m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stickman"]
 sprite_frames = SubResource("SpriteFrames_sl2pp")
-animation = &"Dash"
-frame_progress = 0.78368
+animation = &"Idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Stickman/AnimatedSprite2D"]
 libraries = {
