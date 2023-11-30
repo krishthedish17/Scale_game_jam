@@ -15,5 +15,7 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		await get_tree().create_timer(1.5).timeout
 		GameManager.fight_start = true
+		GameManager.boss_music = true
 		print("player detected")
 		print(GameManager.fight_start)
+		queue_free()

@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var bullet_area = $Area2D
-@export var speed: float = 175
-@export var max_distance: float = 225
+@export var speed: float = 200
+@export var max_distance: float = 250
 @onready var player = $"../../../Player"
 @onready var bullet_sprite = $AnimatedSprite2D
 var original_pos = position.x
@@ -14,6 +14,8 @@ var tornado = false
 var boomerang = false
 var weapon_type = RandomNumberGenerator.new()
 var boomerang_type = 0
+var tornado_type = 0
+var fireball_type = 0
 var boomerang_selected = false
 var weapon = 0
 var weapon_selected = false
@@ -34,6 +36,10 @@ func _process(delta):
 	if weapon_selected == false:
 		weapon = randi_range(1, 3)
 	if weapon == 1:
+		if GameManager.second_phase == false:
+			fireball_type = 1
+		if GameManager.second_phase == true:
+			fireball_type = randi_range(1, 2)
 		weapon_selected = true
 		bullet_sprite.play("fireball")
 		if GameManager.shooting_arm == true || shooting == true:
@@ -41,10 +47,13 @@ func _process(delta):
 			shooting = true
 			self.visible = true
 			position.x += speed * delta
-			position.y = player.position.y
 			print(position.x)
 			if distance < max_distance:
 				distance = position.x - original_pos
+				if fireball_type == 1:
+					position.y = player.position.y
+				elif fireball_type == 2:
+					position.y = original_height - 32
 			else:
 				position.x = original_pos
 				self.visible = false
@@ -52,6 +61,7 @@ func _process(delta):
 				shooting = false
 				weapon_selected = false
 	if weapon == 2:
+		tornado_type = randi_range(1, 2)
 		weapon_selected = true
 		bullet_sprite.play("fire tornado")
 		if GameManager.shooting_arm == true || shooting == true:
@@ -62,8 +72,10 @@ func _process(delta):
 			print(position.x)
 			if distance < max_distance:
 				distance = position.x - original_pos
-				if distance > (max_distance / 8):
+				if distance > (max_distance / 8) && tornado_type == 1:
 					position.y = original_height + 32
+				elif distance > (max_distance / 8) && tornado_type == 2:
+					position.y = original_height - 32
 			else:
 				position.x = original_pos
 				self.visible = false

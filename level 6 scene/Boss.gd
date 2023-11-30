@@ -1,10 +1,11 @@
 extends Node2D
 
-var health = 15
+var health = 60
 @onready var sprite = $AnimatedSprite2D
 @onready var boss = $AnimatedSprite2D/CharacterBody2D
 @onready var cooldown = $cooldown
 @onready var bullet = $AnimatedSprite2D/bullets
+@onready var healthbar = $cooldown/Control/ProgressBar
 
 var idle = false
 var shooting_arm = false
@@ -24,13 +25,21 @@ var death_activated = false
 func _ready():
 	GameManager.second_phase = false
 	GameManager.boss_dead = false
+	GameManager.boss_end = false
 	death_activated = false
+	idle = false
+	health = 60
+	healthbar.value = health
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if low_health == false:
+		healthbar.value = health
+		print("health decreasing")
 	if GameManager.boss_dead == true || GameManager.boss_dead == false:
 		animate()
+		current_attack = 0
 	if dead == true && death_activated == false:
 		GameManager.boss_dead = true
 		death_activated = true
@@ -46,10 +55,6 @@ func _process(delta):
 				#print("post timer")
 	if health <= 0:
 		dead = true
-	if GameManager.hit_shot == true:
-		health -= 1
-		GameManager.hit_shot = false
-		print(str(health) + "health")
 		
 
 func animate():
@@ -68,17 +73,18 @@ func animate():
 		print("shooting arm")
 	if dead == true:
 		sprite.play("dead")
-		await get_tree().create_timer(0.9).timeout
-		GameManager.boss_dead = false
+		await get_tree().create_timer(1.5).timeout
+		GameManager.boss_end = true
+		queue_free()
 	if low_health == true:
-		health = 5
+		health = 15
 		sprite.play("low health")
 		await get_tree().create_timer(2).timeout
 		GameManager.second_phase = true
 		low_health = false
-		health = 4
+		health = 14
 		print(str(health) + "health")
-	if health == 5:
+	if health == 15:
 		low_health = true
 	#if moving == true:
 		#sprite.play("move")
@@ -89,6 +95,7 @@ func animate():
 		sprite.play("intro")
 
 func choose_attack():
+	health_loss()
 	print("choosing attack")
 	can_attack = false
 	var current_attack = boss_attack.randi_range(1, 4)
@@ -136,5 +143,8 @@ func start_fight():
 		can_attack = true
 		print("set attacking to true")
 		GameManager.fight_start = false
-		
+func health_loss():
+	if GameManager.fight_start == true || started_fight == true && health !=0:
+			health -= 1
+			await get_tree().create_timer(1).timeout	
 		

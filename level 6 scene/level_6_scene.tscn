@@ -1,5 +1,7 @@
-[gd_scene load_steps=74 format=3 uid="uid://b8iandbomq4e"]
+[gd_scene load_steps=89 format=3 uid="uid://b8iandbomq4e"]
 
+[ext_resource type="AudioStream" uid="uid://1hacy4m8jwvd" path="res://Music/level_6_ost_scale_jam_song updated 2.wav" id="1_ohx7y"]
+[ext_resource type="Script" path="res://level 6 scene/boss_music.gd" id="2_cqxt4"]
 [ext_resource type="PackedScene" uid="uid://cw7r48v7e6skt" path="res://void_of_death/void_of_death.tscn" id="3_mwatg"]
 [ext_resource type="Script" path="res://level 6 scene/Boss.gd" id="4_8i87r"]
 [ext_resource type="TileSet" uid="uid://bm3r6b7c6khff" path="res://Level 5/default level 5 tileset.tres" id="4_htm4m"]
@@ -9,6 +11,8 @@
 [ext_resource type="Script" path="res://level 6 scene/bullets.gd" id="6_mj6l2"]
 [ext_resource type="PackedScene" uid="uid://cy51reng8rexs" path="res://start_totem/start_totem.tscn" id="7_1rrnh"]
 [ext_resource type="Script" path="res://level 6 scene/boss_detector.gd" id="8_rkjgi"]
+[ext_resource type="Theme" uid="uid://cdqh5a0y8pfbk" path="res://boss_health/boss_health.tres" id="10_7r0bx"]
+[ext_resource type="Script" path="res://level 6 scene/ProgressBar.gd" id="11_oos2v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0n0l"]
 atlas = ExtResource("5_d0400")
@@ -49,6 +53,42 @@ region = Rect2(1280, 576, 160, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_15waf"]
 atlas = ExtResource("5_d0400")
 region = Rect2(1440, 576, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p07la"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 672, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08aw4"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 576, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndvwy"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 672, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_673gh"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 576, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt8bu"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 672, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtpia"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 576, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbp0j"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 672, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i32we"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 576, 160, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxp6i"]
+atlas = ExtResource("5_d0400")
+region = Rect2(1440, 480, 160, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_txv5o"]
 atlas = ExtResource("5_d0400")
@@ -230,6 +270,33 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_15waf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p07la")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08aw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndvwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_673gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt8bu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtpia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbp0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i32we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxp6i")
 }],
 "loop": false,
 "name": &"dead",
@@ -490,12 +557,26 @@ size = Vector2(13.2, 14.8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x03hx"]
 size = Vector2(72.8, 68.8)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gosem"]
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fny6d"]
+bg_color = Color(0, 0.658824, 0.858824, 1)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojuqm"]
 size = Vector2(248, 130.333)
 
 [node name="level 6 scene" type="Node2D"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ohx7y")
+script = ExtResource("2_cqxt4")
+
 [node name="Player" parent="." instance=ExtResource("5_ackhg")]
+position = Vector2(-472, -8)
 
 [node name="Start_totem" parent="." instance=ExtResource("7_1rrnh")]
 position = Vector2(-8, 248)
@@ -514,7 +595,7 @@ script = ExtResource("4_8i87r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_joo1e")
-animation = &"dead"
+animation = &"idle"
 
 [node name="bullets" type="Node2D" parent="Boss/AnimatedSprite2D"]
 script = ExtResource("6_mj6l2")
@@ -539,6 +620,27 @@ shape = SubResource("RectangleShape2D_x03hx")
 
 [node name="cooldown" type="Timer" parent="Boss"]
 one_shot = true
+
+[node name="Control" type="Control" parent="Boss/cooldown"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Boss/cooldown/Control"]
+z_index = -1
+offset_left = 3832.0
+offset_top = -80.0
+offset_right = 3852.0
+offset_bottom = -37.0
+scale = Vector2(25.0626, 1.66583)
+theme = ExtResource("10_7r0bx")
+theme_override_colors/font_color = Color(0, 0.207843, 1, 1)
+theme_override_styles/background = SubResource("StyleBoxTexture_gosem")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fny6d")
+max_value = 60.0
+step = 1.0
+script = ExtResource("11_oos2v")
 
 [node name="Node2D" type="Node2D" parent="."]
 
