@@ -51,7 +51,7 @@ func _process(delta):
 			if distance < max_distance:
 				distance = position.x - original_pos
 				if fireball_type == 1:
-					position.y = player.position.y
+					position.y = original_height
 				elif fireball_type == 2:
 					position.y = original_height - 32
 			else:
@@ -100,7 +100,7 @@ func _process(delta):
 			self.visible = true
 			if going_forward == true:
 				position.x += speed * delta
-				position.y = player.position.y
+				position.y = original_height
 			print(position.x)
 			if distance < max_distance && going_forward == true:
 				distance = position.x - original_pos

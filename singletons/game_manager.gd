@@ -24,6 +24,7 @@ var hit_shot: bool = false
 var boss_dead: bool = false
 var boss_end: bool = false
 var boss_music: bool = false
+var lock_player: bool = false
 func start():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 func load_game_scene() -> void:

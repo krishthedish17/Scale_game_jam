@@ -75,7 +75,7 @@ func _physics_process(delta):
 		if velocity.y >= 0:
 			velocity.y = min(velocity.y + wall_slide_acceleration, max_wall_slide_Speed)
 			
-	if Input.is_action_just_pressed("dash") && GameManager.level > 2 && GameManager.dash_count <= 3:
+	if Input.is_action_just_pressed("dash") && GameManager.level > 2 && GameManager.dash_count <= 3 && GameManager.lock_player == false:
 		print("dash")
 		dash.start_dash(dash_length)
 		print(GameManager.dash_count)
@@ -95,12 +95,14 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
+	if GameManager.lock_player == false:
+		if direction:
+			velocity.x = direction * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
 
-	move_and_slide()
+	if GameManager.lock_player == false:
+		move_and_slide()
 	
 
 # --------- VARIABLES ---------- #

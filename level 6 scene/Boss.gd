@@ -20,6 +20,7 @@ var started_fight = false
 var current_attack = 0
 var low_health = false
 var death_activated = false
+var max_health = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,15 +29,12 @@ func _ready():
 	GameManager.boss_end = false
 	death_activated = false
 	idle = false
-	health = 60
+	health = max_health
 	healthbar.value = health
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if low_health == false:
-		healthbar.value = health
-		print("health decreasing")
 	if GameManager.boss_dead == true || GameManager.boss_dead == false:
 		animate()
 		current_attack = 0
@@ -46,13 +44,18 @@ func _process(delta):
 	elif dead == false || death_activated == false:
 		if started_fight != true:
 			start_fight()
-		if GameManager.fight_start == true || started_fight == true && health != 0:
+		if GameManager.fight_start == true || started_fight == true && health != 0 && low_health == false:
 			animate()
+			if low_health == false:
+				healthbar.value = health
+				print("health decreasing")
 			if can_attack == true:
 				choose_attack()
 				print("attack chosen")
 				#await get_tree().create_timer(5).timeout
 				#print("post timer")
+		if low_health == true:
+			animate()
 	if health <= 0:
 		dead = true
 		
@@ -77,14 +80,14 @@ func animate():
 		GameManager.boss_end = true
 		queue_free()
 	if low_health == true:
-		health = 15
+		health = (max_health * 0.25)
 		sprite.play("low health")
 		await get_tree().create_timer(2).timeout
 		GameManager.second_phase = true
 		low_health = false
-		health = 14
+		health = (max_health * 0.25) - 1
 		print(str(health) + "health")
-	if health == 15:
+	if health == (max_health * 0.25):
 		low_health = true
 	#if moving == true:
 		#sprite.play("move")
