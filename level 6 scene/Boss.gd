@@ -20,7 +20,7 @@ var started_fight = false
 var current_attack = 0
 var low_health = false
 var death_activated = false
-var max_health = 60
+var max_health = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,6 +56,8 @@ func _process(delta):
 				#print("post timer")
 		if low_health == true:
 			animate()
+	if dead == true:
+		animate()
 	if health <= 0:
 		dead = true
 		
@@ -74,9 +76,11 @@ func animate():
 	if shooting_arm == true:
 		sprite.play("shooting arm")
 		print("shooting arm")
-	if dead == true:
+	if dead == true && death_activated == true && GameManager.boss_dead == true:
+		idle = false
 		sprite.play("dead")
-		await get_tree().create_timer(1.5).timeout
+		print("Playing dead anim")
+		await get_tree().create_timer(1.8).timeout
 		GameManager.boss_end = true
 		queue_free()
 	if low_health == true:
@@ -148,6 +152,7 @@ func start_fight():
 		GameManager.fight_start = false
 func health_loss():
 	if GameManager.fight_start == true || started_fight == true && health !=0:
-			health -= 1
-			await get_tree().create_timer(1).timeout	
+		await get_tree().create_timer(1).timeout	
+		health -= 1
+			
 		

@@ -643,7 +643,7 @@ theme = ExtResource("10_7r0bx")
 theme_override_colors/font_color = Color(0, 0.207843, 1, 1)
 theme_override_styles/background = SubResource("StyleBoxTexture_gosem")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fny6d")
-max_value = 60.0
+max_value = 4.0
 step = 1.0
 script = ExtResource("11_oos2v")
 
