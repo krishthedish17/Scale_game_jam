@@ -558,11 +558,8 @@ size = Vector2(13.2, 14.8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x03hx"]
 size = Vector2(72.8, 68.8)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gosem"]
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xljor"]
+bg_color = Color(0.956863, 0.964706, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fny6d"]
 bg_color = Color(0, 0.658824, 0.858824, 1)
@@ -602,6 +599,7 @@ sprite_frames = SubResource("SpriteFrames_joo1e")
 animation = &"idle"
 
 [node name="bullets" type="Node2D" parent="Boss/AnimatedSprite2D"]
+process_mode = 3
 script = ExtResource("6_mj6l2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boss/AnimatedSprite2D/bullets"]
@@ -641,10 +639,11 @@ offset_bottom = -37.0
 scale = Vector2(25.0626, 1.66583)
 theme = ExtResource("10_7r0bx")
 theme_override_colors/font_color = Color(0, 0.207843, 1, 1)
-theme_override_styles/background = SubResource("StyleBoxTexture_gosem")
+theme_override_styles/background = SubResource("StyleBoxFlat_xljor")
 theme_override_styles/fill = SubResource("StyleBoxFlat_fny6d")
-max_value = 4.0
 step = 1.0
+value = 100.0
+show_percentage = false
 script = ExtResource("11_oos2v")
 
 [node name="Node2D" type="Node2D" parent="."]
