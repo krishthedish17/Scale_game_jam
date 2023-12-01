@@ -6,6 +6,7 @@
 size = Vector2(8432, 125)
 
 [node name="void_of_death" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_73uq2")
 
 [node name="Area2D" type="Area2D" parent="."]
