@@ -21,6 +21,6 @@ func _on_portal_entered(body):
 		GameManager.level5win = true
 		await get_tree().create_timer(3).timeout
 		print("You beat level 5")
-		GameManager.load_level_4_scene()
+		GameManager.load_level_6_scene()
 	
 

@@ -68,6 +68,7 @@ func _physics_process(delta):
 			velocity.y = jump_velocity
 			jump_count += 1
 			print(jump_count)
+	
 			
 	#handles wall slide.
 	if is_on_wall() && (Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right")) && GameManager.level > 1:
@@ -120,6 +121,7 @@ func _process(_delta):
 	restart()
 	time_stop()
 	portal_anim()
+	win()
 	
 # --------- CUSTOM FUNCTIONS ---------- #
 
@@ -255,3 +257,8 @@ func _on_stop_cooldown_timeout():
 func portal_anim():
 	if GameManager.level5win == true:
 		$AnimatedSprite2D/AnimationPlayer.play("portal enter")
+
+func win():
+	if GameManager.boss_end == true:
+		await get_tree().create_timer(1).timeout
+		GameManager.load_win_scene()

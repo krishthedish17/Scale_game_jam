@@ -1333,85 +1333,7 @@ motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 texture_filter = 1
-position = Vector2(718, 357.25)
-scale = Vector2(6.08088, 6.08437)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(2364, 364)
-scale = Vector2(6.08088, 6.08437)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(731, -555.25)
-scale = Vector2(6.13235, 5.49062)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(2377, -562)
-scale = Vector2(6.13235, 5.49062)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(587, -1420)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(1970, -1427)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(593, -2274)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(1976, -2274)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(593, -3135)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D11" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(622, -3976)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D13" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(593, -4824)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(1990, -3135)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D12" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(2019, -3976)
-scale = Vector2(5.11765, 5.36875)
-texture = ExtResource("5_bwxqu")
-
-[node name="Sprite2D14" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture_filter = 1
-position = Vector2(1983, -4831)
+position = Vector2(587, 300)
 scale = Vector2(5.11765, 5.36875)
 texture = ExtResource("5_bwxqu")
 
@@ -1441,8 +1363,8 @@ texture = ExtResource("6_nh5xg")
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 texture_filter = 1
-position = Vector2(104.625, 320.75)
-scale = Vector2(5.18107, 7.97813)
+position = Vector2(158, 173)
+scale = Vector2(4.7886, 6.13125)
 texture = ExtResource("6_nh5xg")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1450,16 +1372,16 @@ motion_scale = Vector2(0.77, 0.77)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 texture_filter = 1
-position = Vector2(739.5, 436.75)
-scale = Vector2(4.99081, 6.61562)
+position = Vector2(634, 256)
+scale = Vector2(3.55285, 4.35625)
 texture = ExtResource("7_xkhbm")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 texture_filter = 1
-position = Vector2(751, 434.25)
-scale = Vector2(4.97059, 6.58438)
+position = Vector2(765.812, 295.75)
+scale = Vector2(4.03745, 4.85313)
 texture = ExtResource("8_r6k6w")
 
 [node name="LevelTransition" type="Sprite2D" parent="."]

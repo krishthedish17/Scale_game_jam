@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://b8iandbomq4e"]
+[gd_scene load_steps=96 format=3 uid="uid://b8iandbomq4e"]
 
 [ext_resource type="AudioStream" uid="uid://1hacy4m8jwvd" path="res://Music/level_6_ost_scale_jam_song updated 2.wav" id="1_ohx7y"]
 [ext_resource type="Script" path="res://level 6 scene/boss_music.gd" id="2_cqxt4"]
@@ -574,6 +574,8 @@ size = Vector2(248, 130.333)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j28ll"]
 size = Vector2(96.0001, 128)
 
+[sub_resource type="LabelSettings" id="LabelSettings_f22c2"]
+
 [node name="level 6 scene" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -718,8 +720,8 @@ motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG"]
 texture_filter = 1
-position = Vector2(1948, -63)
-scale = Vector2(22.0147, 13.3625)
+position = Vector2(66.5001, 84.25)
+scale = Vector2(8.18015, 7.45938)
 texture = ExtResource("15_nytxp")
 
 [node name="far" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -752,7 +754,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/buildings"]
 texture_filter = 1
-position = Vector2(407, 101)
+position = Vector2(264.625, 80.875)
 scale = Vector2(5.49724, 4.775)
 texture = ExtResource("17_ow85n")
 
@@ -765,6 +767,45 @@ texture_filter = 1
 position = Vector2(98, 64)
 scale = Vector2(4.16544, 4.19231)
 texture = ExtResource("18_jov7h")
+
+[node name="labels" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="labels"]
+offset_left = 160.0
+offset_top = 192.0
+offset_right = 200.0
+offset_bottom = 215.0
+text = "This is the final level
+You will be taking down a government machine called S.C.A.L.E
+ (Sentient Combat Assault Lethal Entity)"
+label_settings = SubResource("LabelSettings_f22c2")
+
+[node name="Label2" type="Label" parent="labels"]
+offset_left = 760.0
+offset_top = 192.0
+offset_right = 1245.0
+offset_bottom = 270.0
+text = "We need you to go in there and activate the robot so we can 
+destroy it. It can only be destroyed by draining it's battery.
+Just survive, and we'll take care of the rest"
+
+[node name="Label3" type="Label" parent="labels"]
+offset_left = 1280.0
+offset_top = 192.0
+offset_right = 1765.0
+offset_bottom = 270.0
+text = "Good luck, soldier
+(Warning: Time stop does not affect the boss; It's been through
+the same training as you)"
+
+[node name="Label4" type="Label" parent="labels"]
+offset_left = 1880.0
+offset_top = 192.0
+offset_right = 2365.0
+offset_bottom = 270.0
+text = "*A battery bar will appear at the top of the room
+Once the robot hits a certain battery loss their emergency
+aggresion will activate, and the fight will become more difficult*"
 
 [connection signal="body_entered" from="Boss/AnimatedSprite2D/bullets/Area2D" to="Boss/AnimatedSprite2D/bullets" method="_on_bullet_connected"]
 [connection signal="body_entered" from="Node2D/TileMap6/Area2D" to="Node2D/TileMap6/Area2D" method="_on_body_entered"]

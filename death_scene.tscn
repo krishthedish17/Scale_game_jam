@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3db5jqkl6kbj"]
+[gd_scene load_steps=8 format=3 uid="uid://cjsoryhg62anh"]
 
 [ext_resource type="Script" path="res://death_scene.gd" id="1_xh0j0"]
 [ext_resource type="FontFile" uid="uid://j48a1mvlrsu0" path="res://PixelatedDisplay.ttf" id="2_v2vgn"]
@@ -51,19 +51,19 @@ script = ExtResource("1_xh0j0")
 
 [node name="dissolve_rect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_right = 2059.0
-offset_bottom = 1089.0
-size_flags_horizontal = 4
-size_flags_vertical = 6
+offset_right = 1154.0
+offset_bottom = 651.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="dissolve_rect"]
 layout_mode = 0
-offset_left = 270.0
-offset_top = 302.0
-offset_right = 1665.0
-offset_bottom = 967.0
+offset_left = 99.0
+offset_top = 135.0
+offset_right = 1091.0
+offset_bottom = 548.0
 text = "			YOU DIED
 
 

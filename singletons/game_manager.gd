@@ -8,6 +8,7 @@ var level_4_scene: PackedScene = preload("res://Level 4/level_4_scene.tscn")
 var level_5_scene: PackedScene = preload("res://Level 5/level_5_scene.tscn")
 var level_6_scene: PackedScene = preload("res://level 6 scene/level_6_scene.tscn")
 var death_scene: PackedScene = preload("res://death_scene.tscn")
+var win_scene: PackedScene = preload("res://win_screen.tscn")
 var is_big : bool = false
 var is_small: bool = false
 var level: int = 1
@@ -59,3 +60,6 @@ func load_level_6_scene() -> void:
 var is_dragging = false
 func load_death_scene() -> void:
 	get_tree().change_scene_to_packed(death_scene)
+
+func load_win_scene() -> void:
+	get_tree().change_scene_to_packed(win_scene)
