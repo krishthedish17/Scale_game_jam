@@ -249,7 +249,10 @@ func _on_stop_timer_timeout():
 	GameManager.is_paused = false
 	pause_times = 0
 	print(can_pause)
-	stop_cooldown.start(3)
+	if GameManager.level == 6:
+		stop_cooldown.start(30)
+	else:
+		stop_cooldown.start(3)
 func _on_stop_cooldown_timeout():
 	print(can_pause)
 	can_pause = true

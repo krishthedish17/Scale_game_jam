@@ -797,6 +797,8 @@ offset_top = 192.0
 offset_right = 1765.0
 offset_bottom = 270.0
 text = "Good luck, soldier
+(Warning: The robot can affect your time stopping powers and 
+has made it harder to use (Cooldown increased greatly).
 "
 
 [node name="Label4" type="Label" parent="labels"]
