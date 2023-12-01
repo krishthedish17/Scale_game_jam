@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgdggs0fakgep"
+path="res://.godot/imported/Jump sound effect _ No copyright.mp3-b611474554d115012a44df409a6bfa3f.mp3str"
+
+[deps]
+
+source_file="res://StickmanPack/New Stickman sprites/Jump sound effect _ No copyright.mp3"
+dest_files=["res://.godot/imported/Jump sound effect _ No copyright.mp3-b611474554d115012a44df409a6bfa3f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

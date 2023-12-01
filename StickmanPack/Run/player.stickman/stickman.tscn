@@ -1,8 +1,53 @@
-[gd_scene load_steps=28 format=3 uid="uid://dvdetwkhreyjx"]
+[gd_scene load_steps=50 format=3 uid="uid://dvdetwkhreyjx"]
 
 [ext_resource type="Script" path="res://game/stickman.gd" id="1_8dh4m"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="2_x0st5"]
 [ext_resource type="Texture2D" uid="uid://jhkyxcbcswyj" path="res://StickmanPack/Run/thickRunSheet.png" id="3_w760s"]
+[ext_resource type="Script" path="res://grapple gun/pivot.gd" id="4_ojwhu"]
+[ext_resource type="Texture2D" uid="uid://ce83v84j5w7ke" path="res://StickmanPack/Run/wall cling anim.png" id="4_xcvce"]
+[ext_resource type="Texture2D" uid="uid://ddxuo8pp2a108" path="res://hook sprites/link.png" id="5_1b365"]
+[ext_resource type="Script" path="res://grapple_hook.gd" id="6_rdni3"]
+[ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/camera.gd" id="7_fuwlg"]
+[ext_resource type="Shader" path="res://StickmanPack/Run/player.stickman/timestop.gdshader" id="9_engfj"]
+[ext_resource type="PackedScene" uid="uid://3l5urwp8pqpq" path="res://dash/dash.tscn" id="9_jsd3u"]
+[ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/time_effect.gd" id="10_uc088"]
+[ext_resource type="AudioStream" uid="uid://cgdggs0fakgep" path="res://StickmanPack/New Stickman sprites/Jump sound effect _ No copyright.mp3" id="12_nry0j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5pd8"]
+atlas = ExtResource("3_w760s")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajgmp"]
+atlas = ExtResource("3_w760s")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aie27"]
+atlas = ExtResource("3_w760s")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bpsy"]
+atlas = ExtResource("3_w760s")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rydtj"]
+atlas = ExtResource("3_w760s")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa58t"]
+atlas = ExtResource("3_w760s")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ccbd"]
+atlas = ExtResource("3_w760s")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xns6"]
+atlas = ExtResource("3_w760s")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y0mo"]
+atlas = ExtResource("3_w760s")
+region = Rect2(512, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3u7m"]
 atlas = ExtResource("2_x0st5")
@@ -92,6 +137,38 @@ region = Rect2(512, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_q5pd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajgmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aie27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bpsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rydtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa58t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ccbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xns6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y0mo")
+}],
+"loop": true,
+"name": &"Dash",
+"speed": 120.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_i3u7m")
 }, {
 "duration": 1.0,
@@ -166,8 +243,53 @@ animations = [{
 }],
 "loop": true,
 "name": &"Sprint",
-"speed": 25.0
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xcvce")
+}],
+"loop": true,
+"name": &"Wall_Cling",
+"speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_4bcin"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tfn0r"]
+resource_name = "portal enter"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sje18"]
+_data = {
+"RESET": SubResource("Animation_4bcin"),
+"portal enter": SubResource("Animation_tfn0r")
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kls8d"]
 radius = 21.0
@@ -176,20 +298,46 @@ height = 60.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27oav"]
 size = Vector2(44, 64)
 
-[node name="Player" type="Node2D" groups=["player"]]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn1gc"]
+shader = ExtResource("9_engfj")
 
-[node name="Stickman" type="CharacterBody2D" parent="."]
-position = Vector2(1, -2)
+[node name="Player" type="Node2D"]
+process_mode = 3
+
+[node name="Stickman" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(-1, -1)
 script = ExtResource("1_8dh4m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stickman"]
 sprite_frames = SubResource("SpriteFrames_sl2pp")
 animation = &"Idle"
-frame_progress = 0.0477685
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Stickman/AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_sje18")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stickman"]
 position = Vector2(-2, 4)
 shape = SubResource("CapsuleShape2D_kls8d")
+
+[node name="pivot" type="Node2D" parent="Stickman"]
+process_mode = 3
+position = Vector2(-2, 3)
+script = ExtResource("4_ojwhu")
+
+[node name="link" type="Sprite2D" parent="Stickman/pivot"]
+process_mode = 3
+texture_repeat = 2
+rotation = -1.5708
+texture = ExtResource("5_1b365")
+region_enabled = true
+region_rect = Rect2(0.549, -0.072, 15.523, 16)
+script = ExtResource("6_rdni3")
+
+[node name="RayCast2D" type="RayCast2D" parent="Stickman/pivot/link"]
+process_mode = 3
+target_position = Vector2(0, 300)
 
 [node name="Collision" type="Area2D" parent="Stickman"]
 
@@ -207,3 +355,39 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="Stickman"]
 zoom = Vector2(1.2, 1.2)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+script = ExtResource("7_fuwlg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Stickman/Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Stickman/Camera2D/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.462745)
+self_modulate = Color(1, 1, 1, 0.333333)
+material = SubResource("ShaderMaterial_gn1gc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(24.08, 13.4)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("10_uc088")
+
+[node name="dash" parent="Stickman" instance=ExtResource("9_jsd3u")]
+
+[node name="Stop_timer" type="Timer" parent="Stickman"]
+wait_time = 5.0
+one_shot = true
+
+[node name="stop_cooldown" type="Timer" parent="Stickman"]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_nry0j")
+volume_db = -23.929
+
+[connection signal="hooked" from="Stickman/pivot/link" to="Stickman" method="_on_link_hooked"]
+[connection signal="timeout" from="Stickman/Stop_timer" to="Stickman" method="_on_stop_timer_timeout"]
+[connection signal="timeout" from="Stickman/stop_cooldown" to="Stickman" method="_on_stop_cooldown_timeout"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceye1eged2xgc"]
+
+[ext_resource type="Script" path="res://water/water.gd" id="1_mts7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue8c1"]
+size = Vector2(1166, 652)
+
+[node name="water" type="Node2D" groups=["water"]]
+script = ExtResource("1_mts7v")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(573, 316)
+shape = SubResource("RectangleShape2D_ue8c1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_water_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_water_exited"]
