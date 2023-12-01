@@ -122,7 +122,7 @@ func _process(_delta):
 	time_stop()
 	portal_anim()
 	win()
-	
+	level5()
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
@@ -262,3 +262,11 @@ func win():
 	if GameManager.boss_end == true:
 		await get_tree().create_timer(1).timeout
 		GameManager.load_win_scene()
+
+func level5():
+	if GameManager.level == 5:
+		if position.y > 400:
+			get_tree().paused = false
+			GameManager.is_paused = false
+			pause_times = 0
+			death()
