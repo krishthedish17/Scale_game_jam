@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ck2us3bypbyqd"]
+[gd_scene load_steps=18 format=3 uid="uid://ck2us3bypbyqd"]
 
 [ext_resource type="PackedScene" uid="uid://miilhekb52xk" path="res://Platform 1/platform_1.tscn" id="1_hm17a"]
 [ext_resource type="PackedScene" uid="uid://dvdetwkhreyjx" path="res://StickmanPack/Run/player.stickman/stickman.tscn" id="2_481lv"]
@@ -13,12 +13,16 @@
 [ext_resource type="Texture2D" uid="uid://ldhd3wu1a0c2" path="res://flagpoletransition/flagpole.png" id="11_brlge"]
 [ext_resource type="Script" path="res://level 2/LevelTransition.gd" id="12_x0bks"]
 [ext_resource type="AudioStream" uid="uid://cu6enyyqktj0y" path="res://Music/level_2_ost_scale_jam_song updated.wav" id="13_7lof6"]
+[ext_resource type="FontFile" uid="uid://j48a1mvlrsu0" path="res://PixelatedDisplay.ttf" id="14_aq2q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7o3"]
 size = Vector2(657.117, 104.844)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tm6hu"]
 size = Vector2(15.264, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wjbsl"]
+font = ExtResource("14_aq2q4")
 
 [node name="Level 2" type="Node2D"]
 
@@ -1400,5 +1404,53 @@ shape = SubResource("RectangleShape2D_tm6hu")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_7lof6")
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 451.0
+offset_top = 190.0
+offset_right = 964.0
+offset_bottom = 324.0
+text = "You have been blessed with a grapple hook left click  to use it 
+
+"
+label_settings = SubResource("LabelSettings_wjbsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 787.0
+offset_top = -2620.0
+offset_right = 1300.0
+offset_bottom = -2486.0
+text = "One big hop
+
+(Make sure to maximize range)"
+label_settings = SubResource("LabelSettings_wjbsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1338.0
+offset_top = -3294.0
+offset_right = 1851.0
+offset_bottom = -3160.0
+text = "Two big hop
+
+"
+label_settings = SubResource("LabelSettings_wjbsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 762.0
+offset_top = -3934.0
+offset_right = 1275.0
+offset_bottom = -3800.0
+text = "Three big hop
+
+"
+label_settings = SubResource("LabelSettings_wjbsl")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="LevelTransition/Area2D" to="LevelTransition" method="_on_area_2d_body_entered"]

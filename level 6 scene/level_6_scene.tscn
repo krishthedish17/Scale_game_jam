@@ -583,7 +583,7 @@ stream = ExtResource("1_ohx7y")
 script = ExtResource("2_cqxt4")
 
 [node name="Player" parent="." instance=ExtResource("5_ackhg")]
-position = Vector2(-8, 168)
+position = Vector2(-8, 211)
 
 [node name="Start_totem" parent="." instance=ExtResource("7_1rrnh")]
 position = Vector2(-8, 248)
@@ -720,8 +720,8 @@ motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG"]
 texture_filter = 1
-position = Vector2(66.5001, 84.25)
-scale = Vector2(8.18015, 7.45938)
+position = Vector2(1768, 87)
+scale = Vector2(20.6912, 12.325)
 texture = ExtResource("15_nytxp")
 
 [node name="far" type="ParallaxLayer" parent="ParallaxBackground"]
