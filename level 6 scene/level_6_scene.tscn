@@ -579,6 +579,7 @@ size = Vector2(96.0001, 128)
 [node name="level 6 scene" type="Node2D"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("1_ohx7y")
 script = ExtResource("2_cqxt4")
 
@@ -614,6 +615,7 @@ sprite_frames = SubResource("SpriteFrames_ik2h0")
 animation = &"fire tornado"
 
 [node name="Area2D" type="Area2D" parent="Boss/AnimatedSprite2D/bullets"]
+process_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/AnimatedSprite2D/bullets/Area2D"]
 z_index = -1
@@ -795,8 +797,7 @@ offset_top = 192.0
 offset_right = 1765.0
 offset_bottom = 270.0
 text = "Good luck, soldier
-(Warning: Time stop does not affect the boss; It's been through
-the same training as you)"
+"
 
 [node name="Label4" type="Label" parent="labels"]
 offset_left = 1880.0
