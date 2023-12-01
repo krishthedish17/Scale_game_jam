@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dvdetwkhreyjx"]
+[gd_scene load_steps=50 format=3 uid="uid://dvdetwkhreyjx"]
 
 [ext_resource type="Script" path="res://game/stickman.gd" id="1_8dh4m"]
 [ext_resource type="Texture2D" uid="uid://dke3t8oslwsjb" path="res://StickmanPack/Idle/thickIdleSheet.png" id="2_x0st5"]
@@ -11,6 +11,7 @@
 [ext_resource type="Shader" path="res://StickmanPack/Run/player.stickman/timestop.gdshader" id="9_engfj"]
 [ext_resource type="PackedScene" uid="uid://3l5urwp8pqpq" path="res://dash/dash.tscn" id="9_jsd3u"]
 [ext_resource type="Script" path="res://StickmanPack/Run/player.stickman/time_effect.gd" id="10_uc088"]
+[ext_resource type="AudioStream" uid="uid://cgdggs0fakgep" path="res://StickmanPack/New Stickman sprites/Jump sound effect _ No copyright.mp3" id="12_nry0j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5pd8"]
 atlas = ExtResource("3_w760s")
@@ -382,6 +383,10 @@ one_shot = true
 
 [node name="stop_cooldown" type="Timer" parent="Stickman"]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_nry0j")
+volume_db = -23.929
 
 [connection signal="hooked" from="Stickman/pivot/link" to="Stickman" method="_on_link_hooked"]
 [connection signal="timeout" from="Stickman/Stop_timer" to="Stickman" method="_on_stop_timer_timeout"]

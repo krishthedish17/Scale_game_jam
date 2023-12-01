@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://b8iandbomq4e"]
+[gd_scene load_steps=95 format=3 uid="uid://b8iandbomq4e"]
 
 [ext_resource type="AudioStream" uid="uid://1hacy4m8jwvd" path="res://Music/level_6_ost_scale_jam_song updated 2.wav" id="1_ohx7y"]
 [ext_resource type="Script" path="res://level 6 scene/boss_music.gd" id="2_cqxt4"]
@@ -14,6 +14,10 @@
 [ext_resource type="Theme" uid="uid://cdqh5a0y8pfbk" path="res://boss_health/boss_health.tres" id="10_7r0bx"]
 [ext_resource type="Script" path="res://level 6 scene/ProgressBar.gd" id="11_oos2v"]
 [ext_resource type="Script" path="res://level 6 scene/boss_enclosure.gd" id="14_n6g5b"]
+[ext_resource type="Texture2D" uid="uid://d2xxmoa4vtbcf" path="res://level 6 assests/parallax-industrial-web/parallax-industrial-pack/Sprites/parallax-industrial-web/parallax-industrial-pack/Sprites/bg.png" id="15_nytxp"]
+[ext_resource type="Texture2D" uid="uid://c4jh80innxpkm" path="res://level 6 assests/parallax-industrial-web/parallax-industrial-pack/Sprites/parallax-industrial-web/parallax-industrial-pack/Sprites/far-buildings.png" id="16_gld3r"]
+[ext_resource type="Texture2D" uid="uid://cqet43y2qyfjy" path="res://level 6 assests/parallax-industrial-web/parallax-industrial-pack/Sprites/parallax-industrial-web/parallax-industrial-pack/Sprites/buildings.png" id="17_ow85n"]
+[ext_resource type="Texture2D" uid="uid://in444ptirqc" path="res://level 6 assests/parallax-industrial-web/parallax-industrial-pack/Sprites/parallax-industrial-web/parallax-industrial-pack/Sprites/skill-foreground.png" id="18_jov7h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0n0l"]
 atlas = ExtResource("5_d0400")
@@ -706,6 +710,61 @@ script = ExtResource("14_n6g5b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/TileMap7/StaticBody2D"]
 position = Vector2(464, 205.333)
 shape = SubResource("RectangleShape2D_j28ll")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BG" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG"]
+texture_filter = 1
+position = Vector2(66.5001, 84.25)
+scale = Vector2(8.18015, 7.45938)
+texture = ExtResource("15_nytxp")
+
+[node name="far" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/far"]
+texture_filter = 1
+position = Vector2(129.125, 13.4999)
+scale = Vector2(8.74061, 7.14789)
+texture = ExtResource("16_gld3r")
+
+[node name="far2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/far2"]
+texture_filter = 1
+position = Vector2(2108, 18)
+scale = Vector2(8.74061, 7.14789)
+texture = ExtResource("16_gld3r")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/far2"]
+texture_filter = 1
+position = Vector2(4084, -14)
+scale = Vector2(8.74061, 7.14789)
+texture = ExtResource("16_gld3r")
+
+[node name="buildings" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/buildings"]
+texture_filter = 1
+position = Vector2(264.625, 80.875)
+scale = Vector2(5.49724, 4.775)
+texture = ExtResource("17_ow85n")
+
+[node name="skill-foreground" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_mirroring = Vector2(1345, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/skill-foreground"]
+texture_filter = 1
+position = Vector2(98, 64)
+scale = Vector2(4.16544, 4.19231)
+texture = ExtResource("18_jov7h")
 
 [connection signal="body_entered" from="Boss/AnimatedSprite2D/bullets/Area2D" to="Boss/AnimatedSprite2D/bullets" method="_on_bullet_connected"]
 [connection signal="body_entered" from="Node2D/TileMap6/Area2D" to="Node2D/TileMap6/Area2D" method="_on_body_entered"]

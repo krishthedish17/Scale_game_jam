@@ -19,8 +19,7 @@ var can_pause = true
 @onready var dash = $dash
 @onready var timer = $Stop_timer
 @onready var stop_cooldown = $stop_cooldown
-
-
+@onready var jump_sound = $"../AudioStreamPlayer"
 @export_category("Toggle Functions") # Double jump feature is disable by default (Can be toggled from inspector)
 @export var double_jump : = false
 
@@ -65,6 +64,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if jump_count < max_jump_count:
 		if Input.is_action_just_pressed("ui_accept"):
+			jump_sound.play()
 			velocity.y = jump_velocity
 			jump_count += 1
 			print(jump_count)
@@ -163,22 +163,10 @@ func flip_player():
 # Tween Animations
 func death():
 	#death_particles.emitting = true
+
+	GameManager.load_death_scene()
 	print(GameManager.level)
-	print("I'm dead")
-	if GameManager.level == 1:
-		GameManager.load_game_scene()
-	elif GameManager.level == 2:
-		GameManager.load_level_2_scene()
-	elif GameManager.level == 3:
-		GameManager.load_level_3_scene()
-	elif GameManager.level == 4:
-		GameManager.load_level_4_scene()
-	elif GameManager.level == 5:
-		GameManager.load_level_5_scene()
-	elif GameManager.level == 6:
-		GameManager.load_level_6_scene()
-	elif GameManager.level == 7:
-		GameManager.load_level_7_scene()
+	print("i'm dead")
 	
 
 func shrink():
