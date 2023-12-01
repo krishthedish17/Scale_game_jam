@@ -718,8 +718,8 @@ motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BG"]
 texture_filter = 1
-position = Vector2(66.5001, 84.25)
-scale = Vector2(8.18015, 7.45938)
+position = Vector2(1948, -63)
+scale = Vector2(22.0147, 13.3625)
 texture = ExtResource("15_nytxp")
 
 [node name="far" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -752,7 +752,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/buildings"]
 texture_filter = 1
-position = Vector2(264.625, 80.875)
+position = Vector2(407, 101)
 scale = Vector2(5.49724, 4.775)
 texture = ExtResource("17_ow85n")
 

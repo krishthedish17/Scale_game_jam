@@ -1338,12 +1338,10 @@ outline_color = Color(0, 0, 0, 1)
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-texture_filter = 1
-position = Vector2(550, 328)
-scale = Vector2(2.07827, 1.8151)
+position = Vector2(2594.5, 48.5001)
+scale = Vector2(9.41054, 7.57552)
 texture = ExtResource("4_a46qd")
 
 [node name="Start_totem" parent="." instance=ExtResource("1_h1km3")]
