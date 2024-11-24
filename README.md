@@ -1,21 +1,23 @@
 # Scale_game_jam
-This is a fun little platformer that goes through all the definitions of Scale
-This was our first game. We are in high school so we had to balance the development with school but for our first experience posting a game, I think we did pretty good
+This enjoyable platformer explores various definitions of "Scale". As our first game, we managed to balance development with our high school commitments. We think we did pretty well for our debut!
 
 # Definitions used:
 
-Level 1: increase/decrease in size
+Levels:
 
-Level 2: climbing
+Increase/Decrease in size
 
-Level 3: fish scale
-Level 4: a measuring instrument for weighing; shows amount of mass
+Climbing
 
-Level 5: a series of notes differing in pitch according to a specific scheme (usually within an octave).
+Fish scale
 
-Level 6: Secret (Go play the game and find out)
+Weighing instrument showing mass
 
-OST: Scales up the major octaves slowly (Level 1 starts at C major, win screen ost is in B major)
+Musical notes arranged by pitch (usually within an octave)
+
+Secret (Play the game to uncover it)
+
+OST: Progresses through major octaves gradually. Level 1 starts at C major, and the win screen OST is in B major.
 
 # TechStack
 Godot Engine 4.1.1 was used to create this game
